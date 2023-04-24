@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body, html {
+   
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2C3234;
+  
+    
+  }
+
+ 
+
+
+@mixin titles{
+            font-size: 18pt;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            line-height: 24px;
+            color: #FFFFFF;
+
+}
+
+@mixin line{
+                width: 4pt;
+                height: 46pt;
+                background: #EF5A21;
+                border: 1px solid #F05A22;
+                border-radius: 0pt 0pt 4pt 4pt;
+                position: absolute;
+                box-shadow: 0pt 0pt 10pt #F05A22;
+}
+
+@mixin orangeLine{
+  width: 4pt;
+  height: 46pt;
+  background: #EF5A21;
+  border: 1px solid #F05A22;
+  border-radius: 0pt 0pt 4pt 4pt;
+  position: absolute;
+  box-shadow: 0pt 0pt 10pt #F05A22;
+  
+}
+
+@mixin arrow{
+            position: absolute;
+            left: 90%;
+            margin-top: -50px;
+            cursor: pointer;
+}
+
+@mixin titles2{
+
+            font-size: 13pt;
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
+            line-height: 17px;
+            color: #FFFFFF;
+
+}
+@mixin pare{
+       position: absolute;
+        display: flex;
+        width: 100%;
+        border: none;
+}
+
+@mixin date{
+  border: 1px solid #B78648;
+            border-radius: 15pt 15pt 0pt 15pt;
+            width: 120pt;
+            height: 25pt;
+            background: #B78648;
+            text-align: center;
+            @include titles;
+            font-size: 14pt;
+            line-height: 17px;
+            font-weight: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+

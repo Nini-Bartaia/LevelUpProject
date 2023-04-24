@@ -1,0 +1,1066 @@
+@import "../../styles.scss";
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('/assets/Linotype-HelveticaNeueLTGEO75Bold.ttf');    
+    font-weight: normal;
+    font-style: normal;
+  }
+.container{
+    
+    width: 940pt;
+    height: calc(100vh - 70pt);
+    margin: 30px 0 0 auto;
+    position: relative;
+    border: 1px solid #1C1D1E;
+    border-radius: 13pt;
+    overflow: auto;
+    background-color: #1C1D1E;
+
+    .x-mark{
+        width: 34pt;
+        height: 34pt;
+        left: 79%;
+        top: 5%;
+        position: fixed;
+        z-index: 1;
+        cursor: pointer;
+
+    }
+
+        .dates{
+            width: 280pt;
+            height: 34pt;
+            display: flex;
+            flex-direction: row;
+            color: white;
+            position: absolute;
+            top: 16pt;
+            left: 15pt;
+            border: 1px solid #25292B;
+            background: #25292B;
+            border-radius: 35pt;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            top: 5%;
+            left: 18%;
+            z-index: 1;
+
+            #slots{
+                border: 1px solid #2C3234 ;
+                border-radius: 13pt;
+                width: 81pt;
+                height: 25pt;
+                background: #2C3234;
+                @include titles;
+                font-size: 13pt;
+                line-height: 16px;
+                font-family: 'MyFont', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+            .date{
+                @include titles;
+                font-size: 15pt;
+                line-height: 19px;
+                font-family: 'MyFont', sans-serif;
+
+
+            }
+            
+        }
+
+
+        .secondHeader{
+            width: 854pt;
+            height: 315pt;
+            margin-left: 43pt;
+
+            .childHeader{
+                width: 100%;
+                height: 72pt;
+                border: 1px solid #2C3234;
+                border-radius: 16pt 16pt 0pt 0pt;
+                @include titles;
+                font-family: 'MyFont', sans-serif;
+                font-size: 18pt;
+                line-height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #2C3234;
+
+            }
+            .firstParagraph{
+                margin-left: 177pt;
+                font-size: 16pt;
+                line-height: 20px;
+
+            }
+            .secondParagraph{
+                margin-left: 240pt;
+                opacity: 90%;
+                margin-top: 20px;
+                @include titles2;
+
+            
+            }
+            .thirdParagraph{
+                @include titles2;
+                margin-left: 250pt;
+                opacity: 90%;
+                span{
+                    @include titles2;
+                    margin-left: 105pt;
+                   
+                }
+            }
+            .btn{
+                width: 152pt;
+                height: 32pt;
+                border-radius: 5pt;
+                background: #F05A22;
+                border: 1px solid #F05A22 ;
+                margin-left: 330pt;
+                margin-top: 15pt;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include titles;
+                font-size: 15pt;
+                line-height: 19px;
+                cursor: pointer;
+
+
+
+            }
+
+            .clock{
+                width: 200pt;
+                height: 32pt;
+                border: 1px solid red;
+                margin-left: 295pt;
+                margin-top: 20pt;
+                border: 2pt solid #F05A22;
+                border-radius: 10pt;
+                box-shadow: 0pt 0pt 12pt #F05A22;
+                text-align: center;
+                
+
+                .circle{
+                    width: 35pt;
+                    height: 33pt;
+                    border-radius: 10pt 50% 50% 10pt;
+                    background: #F05A22;
+                    border: 1pt solid #F05A22;
+                    margin-left: -2px;
+                    margin-top: -2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   
+
+                    
+
+                    svg{
+                        width: 20pt;
+                        height: 20pt;
+                    }
+                }
+                #time{
+                    @include titles;
+                    font-size: 13pt;
+                    line-height: 17px;
+                    opacity: 90%;
+                    margin-top: -34px;
+                }
+
+
+            }
+
+            .leftImg{
+                position: absolute;
+                top: 93.4%;
+                width: 30%;
+
+            }
+
+            .rightImg{
+                position: absolute;
+                top: 95.5%;
+                width: 30%;
+                left: 65%;
+            }
+
+        }
+
+        .mainbg{
+            display: block;
+            width: 100%;
+            height: 350pt;
+            border: none;
+           
+        }
+
+        p{
+            font-size: 20pt;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            line-height: 26px;
+            color: #FFFFFF;
+            margin-left: 43.5pt;
+        }
+        span{
+            font-size: 16pt;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            line-height: 18px;
+            color: #FFFFFF;
+            margin-left: 43.5pt;
+            opacity: 90%;
+
+        }
+.header{
+    margin: 39pt 43pt 30pt 43pt;
+    width: 854pt;
+    height: 77pt;
+    background: #2C3234;
+    border: 1px solid #2C3234;
+    border-radius: 12pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    div{
+        width: 270pt;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            height: 90pt;
+            background: #EF5A21;
+            border-radius: 12pt;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+         span:first-child{
+            font-size: 14pt;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            line-height: 16px;
+            color: #FFFFFF;
+            opacity: 80%;
+           
+          
+         }
+         .second{
+            font-size: 18pt;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            line-height: 24px;
+            color: #FFFFFF;
+            
+         }
+
+         
+       
+        
+        
+    }
+
+    
+}
+
+
+.wrapper{
+    width: 854pt;
+    height: 1758pt;
+    margin: 24pt 43pt 20pt 43pt;
+    background: #2C3234;
+    border: 1px solid #2C3234;
+    border-radius: 16pt 16pt 16pt 16pt;
+
+    .topBorder{
+        width: 251pt;
+        height: 5pt;
+        border: 1px solid #F05A22;
+        border-radius: 0pt 0pt 4pt 4pt;
+        box-shadow: 0pt 0pt 10pt #F05A22;
+        position: absolute;
+        position: absolute;
+        left: 40%;
+        background: #F05A22;
+
+    }
+    
+
+    .top{
+
+        width: 100%;
+        height: 70pt;
+        background: #2C3234;
+        border: 1px solid #2C3234;
+        border-radius: 16pt 16pt 0pt 0pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+           
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            line-height: 24px;
+            font-size: 18pt;
+            color:#FFFFFF;
+            text-align: center;
+            
+        }
+    
+
+    }
+
+
+    .back{
+        width: 99%;
+        // height: 1758pt;
+        height: 95.7%;
+        background-color: #171718;
+        margin: 0pt 4.5pt 0pt 4.5pt;
+        position: relative;
+        border: 1px solid #171718;
+        border-radius: 16pt 16pt 16pt 16pt;
+
+
+
+        .titleTop{
+            @include titles;
+            font-size: 16pt;
+            line-height: 20px;
+            position: absolute;
+            top: 10pt;
+            left: 31%;
+            
+
+        }
+
+        .info{
+            position: absolute;
+            left: 67%;
+            top: 1.5%;
+            opacity: 50%;
+            box-shadow: 0pt 3pt 6pt #00000029;
+        }
+
+
+        .first{
+            width: 806pt;
+            height: 455pt;
+            background: #25292B;
+            border: 1px solid #25292B;
+            border-radius: 12pt;
+            margin: 60pt 20pt 0pt 20pt;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+
+            .title{
+                @include titles;
+                font-size: 13pt;
+                line-height: 23px;
+                color:#7D7D7D;
+                opacity: 90%;
+                margin-top: 31pt;
+            }
+
+            .left{
+                margin-left: 42pt;
+                
+               
+            }
+
+            .watchIcon{
+                position: absolute;
+                left: 39.5%;
+                width: 20pt;
+                height: 12pt;
+                top: 8%;
+            }
+        
+            .right{
+                margin-right: 122pt;
+               
+            }
+
+
+            .scrollWrapper{
+                width: 92%;
+                position: absolute;
+                display: flex;
+                margin-top: 80pt;
+                flex-direction: column;
+                align-items: baseline;
+                margin-left: 32pt;
+                overflow-y: scroll; 
+                
+
+
+                .scrollWrapperContainer{
+    
+                    max-height: 470px;
+                }
+
+                .child{
+                    width: 210%;
+                    border: 2pt solid #2C3234;
+                    height: 56pt;
+                    border-radius: 76pt 76pt 76pt 76pt;
+                    background: #1E2122;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+
+        
+
+                    .line{
+                        @include titles;
+                        font-size: 14pt;
+                        line-height: 21px;
+                        margin-left: 55pt;
+                    }
+                    
+
+                    .travel{
+                        position: absolute;
+                        left: 69%;
+                        top: 5%;
+                    }
+                    .ticket{
+                        position: absolute;
+                        left: 69%;
+                        top: 22%;
+                    }
+                    .prize1{
+                        margin-right: 37pt;
+                        @include titles;
+                        font-size: 13pt;
+                        line-height: 7px;
+                        font-weight: 500;
+                    }
+
+                    
+
+                    .nom{
+                        box-shadow: 0pt 0pt 5pt #2C3234;
+                        background: #2C3234;
+                        border-radius: 50%;
+                        width: 28pt;
+                        height: 28pt;
+                        margin-left: 20pt;
+                        margin-top: 14pt;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @include titles;
+                        font-size: 13pt;
+                        color:#FFFFFF;
+                        line-height: 7px;
+                    }
+
+                }
+
+    
+            }
+            .scrollWrapper::-webkit-scrollbar {
+                background-color: #2C3234;
+                border: 1px solid #2C3234;
+                border-radius: 2pt;
+                opacity: 50%;
+                width: 4pt;
+              }
+         
+
+            .scrollWrapper::-webkit-scrollbar-thumb {
+                width: 4pt;
+                border: 2px solid #F05A22;
+                border-radius: 2pt 2pt 2pt 2pt;
+                background-color: #F05A22;
+              }
+            
+            
+        }
+
+
+        .second{
+            width: 806pt;
+            height: 276pt;
+            background: #25292B;
+            border: 1px solid #25292B;
+            border-radius: 12pt;
+            margin: 20pt 20pt 0pt 20pt;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            
+
+            div{
+                width: 94%;
+                background-color: #202324;
+                border: 1px solid #202324;
+                border-radius: 12pt;
+                height: 72pt;
+                
+
+
+            }
+
+            .travel2{
+                position: absolute;
+                left: 9%;
+                top: 34%;
+                width: 35pt;
+                height: 35pt;
+            }
+            .ticket2{
+
+                position: absolute;
+                left: 9%;
+                top: 39%;
+                width: 35pt;
+                height: 35pt;
+
+            }
+            .watchIcon2{
+                position: absolute;
+                left: 9%;
+                top: 44%;
+                width: 35pt;
+                height: 35pt;
+
+            }
+
+            // @font-face {
+            //     font-family: 'MyFont';
+            //     src: url('/assets/Linotype-HelveticaNeueLTGEO75Bold.ttf');    
+            //     font-weight: normal;
+            //     font-style: normal;
+            //   }
+            .par1{
+                margin-left: 74pt;
+                margin-top: 26pt;
+                font-size: 15pt;
+                line-height:16px;
+                font-family: 'MyFont', sans-serif;
+                font-weight: 100;
+            }
+            .par2{
+                margin-left: 74pt;
+                margin-top: 20pt;
+                font-size: 15pt;
+                line-height:20px;
+                font-family: 'MyFont', sans-serif;
+                font-weight: 100;
+
+            }
+
+
+            .par3{
+                margin-left: 74pt;
+                margin-top: 20pt;
+                font-size: 15pt;
+                line-height:20px;
+                font-family: 'MyFont', sans-serif;
+                font-weight: 100;
+
+            }
+
+            
+
+            .line2{
+                @include line;
+                left: 5%;
+                top: 33.5%;
+            }
+            .line3{
+                @include line;
+                left: 5%;
+                top: 38.5%;
+            }
+            .line4{
+                @include line;
+                left: 5%;
+                top: 44%;
+
+            }
+
+        }
+
+        .parTop{
+            position: absolute;
+            left: 25%;
+            font-family: "Lato", sans-serif;
+            font-weight: bold;
+            line-height: 24px;
+            color: #FFFFFF;
+            font-size: 16pt;
+            line-height: 20px
+
+        }
+
+        .exampleIcon{
+            position: absolute;
+            left: 61%;
+            top: 49.4%;
+        }
+
+        #secondLine{
+            @include orangeLine;
+            left: 5%;
+            top: 82%;
+        }
+        #thirdLine{
+            @include orangeLine;
+            left: 5%;
+            top: 87%;
+        }
+        #forthLine{
+            @include orangeLine;
+            left: 5%;
+            top: 92.5%;
+        }
+        #secondTravel{
+            position: absolute;
+            left: 8.5%;
+            top: 82%;
+            width: 35pt;
+            height: 35pt;
+        }
+        #secondTicket{
+            position: absolute;
+            left: 8.5%;
+            top: 87.5%;
+            width: 35pt;
+            height: 35pt;
+        }
+        #secondWatch{
+            position: absolute;
+            left: 8.5%;
+            top: 92.5%;
+            width: 35pt;
+            height: 35pt;
+        }
+
+        .lastPara{
+            @include titles;
+            font-size: 14pt;
+            line-height: 18pt;
+            font-weight: 100;
+            position: absolute;
+            left: 19%;
+
+            .small{
+                margin-left: 6px;
+                @include titles;
+                font-size: 14pt;
+                line-height: 18pt;
+                font-weight: 100;
+                text-decoration: underline;
+                color: #EF5A21;
+                cursor: pointer;
+            }
+        }
+
+        .star{
+            position: absolute;
+            left: 23%;
+            top: 97.8%;
+            width: 7pt;
+        }
+    }
+
+
+    
+    
+}
+
+.midDiv{
+    border: 4pt solid #25292B;
+    width: 854pt;
+    height: 375pt;
+    margin-left: 43pt;
+    background: #171718;
+    display: flex;
+    border-radius: 16pt;
+    flex-wrap: wrap;
+    
+    div:nth-child(2){
+        
+        flex-grow: 1;
+        width: 367pt;
+        height: 104pt;
+        border:1pt solid #000000;
+        border-radius: 12pt;
+        margin-left: 24pt;
+    }
+    div:nth-child(3){
+       
+        flex-grow: 1;
+        width: 367pt;
+        height: 104pt;
+        margin-left: 20pt;
+        border:1pt solid #000000;
+        border-radius: 12pt;
+        margin-right: 24pt;
+    }
+    div:nth-child(4){
+       
+        flex-basis: 100%;
+        height: 104pt;
+        border:1pt solid #000000;
+        opacity: 80%;
+        border-radius: 12pt;
+        margin-left: 24pt;
+        margin-right: 24pt;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    #footerTitle{
+        font-size: 14pt;
+        line-height: 18px;
+        color: white;
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        margin-left: 200pt;
+
+    }
+    #headertitle{
+        @include titles;
+        margin-left: 200pt;
+    }
+
+
+    #pare1{
+        @include pare;
+        top: 267%;
+        left: 3%;
+       
+       
+    }
+    .name1{
+        @include titles2;
+        font-size: 15pt;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    .name2{
+        @include titles2;
+        font-size: 13pt;
+        line-height: 17px;
+        
+
+    }
+
+    #pare2{
+        @include pare;
+        top: 270%;
+        left: 3.5%;
+
+        
+
+    }
+    .name3{
+        @include titles;
+        color:#FFBE00;
+        line-height: 20px;
+        font-size: 24pt;
+        
+
+    }
+    .name4{
+        @include date;
+
+        margin-left: 90px;
+
+    }
+
+    #pare3{
+        @include pare;
+        top: 267%;
+        left: 47%;
+    }
+
+    #pare4{
+        @include pare;
+        top: 270%;
+        left: 47.5%;
+    }
+    .lastImage{
+
+    }
+    #pare5{
+        @include pare;
+        top: 281%;
+        left: 30%;
+
+    .events{
+        @include titles2;
+        font-size: 22pt;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    .loc{
+        @include titles2;
+        font-size: 16pt;
+        line-height: 17px;
+        font-weight: bold;
+    }
+
+    }
+    #pare6{
+        @include pare;
+        top: 286%;
+        left: 30%;
+
+    .name6{
+        @include date;
+        background: #D7C860;
+        color:#094B3D;
+        font-size: 16pt;
+        line-height: 20px;
+
+    }
+    }
+
+
+}
+
+.add{
+    width: 854pt;
+    height: 125pt;
+    border: 1px solid #1C1D1E;
+    border-radius: 16pt;
+    margin-top: 20pt;
+    margin-bottom: 55pt;
+    margin-left: 43pt;
+    background-color: #2C3234;
+
+    .headerLine{
+        @include orangeLine;
+        width: 251pt;
+        height: 5pt;
+        margin-left: 295pt;
+        
+    }
+
+    #addPara{
+        @include titles;
+        margin-top: 24pt;
+        margin-left: 100pt;
+
+    }
+    #spanTitle{
+        @include titles;
+        margin-left: 220pt;
+        opacity: 100%;
+
+
+    }
+
+    #secondStar{
+        position: absolute;
+        left: 16%;
+        width: 7pt;
+}
+
+    #addSecondPara{
+        color:white;
+        font-size: 15pt;
+        line-height: 20px;
+        font-family: 'MyFont', sans-serif;
+        position: absolute;
+        left: 19%;
+        position: absolute;
+        left: 12%;
+        margin-top: -1px;
+        font-weight: 100;
+    }
+    
+
+
+
+}
+
+.headerTtile{
+    @include titles;
+    line-height: 32px;
+    font-family: 'MyFont', sans-serif;
+    font-weight: 100;
+
+}
+
+.questionsDiv{
+    width: 854pt;
+    margin-left: 43pt;
+    height: 200pt;
+    margin-top: 32pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 54pt;
+
+
+    div{
+        border: 2px solid blue;
+        width: 100%;
+        height: 60pt;
+        border: 1px solid #25292B;
+        border-radius: 8pt;
+        margin-top: 10pt;
+        background: #25292B;
+        
+
+        p{
+            margin-left: 27pt;
+            font-family: 'MyFont', sans-serif;
+            font-size: 15pt;
+            line-height: 21.6px;
+            font-weight: 100;
+            margin-top: 20pt;
+
+        }
+
+        .arrow1{
+            @include arrow;
+        }
+        
+    }
+
+
+}
+
+.headerTitle2{
+    margin-bottom: 32pt;
+    font-weight: 100;
+}
+
+.footer{
+    width: 900pt;
+    height: 272pt;
+    margin-left: 44pt;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100pt;
+    justify-content: space-between;
+    overflow-x: auto;
+
+    .footerContainer{
+        
+       display: flex;
+       overflow-y: hidden;
+
+       div{
+        width: 233pt;
+        height: 272pt;
+        
+        flex-shrink: 0;
+        margin-right: 16pt;
+
+        .firstImage{
+            width: 100%;
+            height: 292pt;
+        
+        }
+
+        .note1{
+            margin-left: 20pt;
+            margin-top: -45%;
+            @include titles;
+            font-size: 14pt;
+            line-height: 17px;
+            font-family: 'MyFont', sans-serif;
+
+            small{
+                line-height: 14px;
+                font-weight: 100;
+                font-size: 14pt;
+                font-family: 'MyFont', sans-serif;
+                color: white;
+            }
+        }
+
+        .note2{
+            margin-left: 15pt;
+            margin-top: -65%;
+            @include titles;
+            font-size: 14pt;
+            line-height: 17px;
+            font-family: 'MyFont', sans-serif;
+
+        }
+        .note4{
+            margin-left: 20pt;
+            margin-top: -55%;
+            @include titles;
+            font-size: 14pt;
+            line-height: 17px;
+            font-family: 'MyFont', sans-serif;
+
+        }
+        .secondImage{
+            width: 100%;
+            height: 349pt;
+
+        }
+        .thirdImage{
+            width: 100%;
+            height: 320pt;
+
+        }
+      
+        
+
+    }
+       
+    }
+    
+   
+
+}
+
+.fixedDiv{
+    width: 940pt;
+    height: 70pt;
+    background: #171718;
+    border-top: 2px solid #F05A22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+
+    button{
+        width: 144pt;
+        height: 36pt;
+        border-radius: 3pt;
+        background: #F05A22;
+        color: #FFFFFF;
+        @include titles;
+        font-family: 'MyFont', sans-serif;
+        font-size: 15pt;
+        line-height: 19px;
+        cursor: pointer;
+
+    }
+}
+    
+
+}

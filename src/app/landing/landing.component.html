@@ -1,0 +1,474 @@
+<div class="container">
+    <div class="dates">
+        <div id="slots">სლოტები</div>
+        <div class="date">10 იანვარი - 12 მარტი</div>
+    </div>
+
+    <div style="background-color: #25292B; width: 34pt; height: 34pt; border-radius: 50%; display: flex; justify-content: center; align-items: center;" class="x-mark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 30px; height: 30px;">
+          <path d="M17.7 6.3c-0.4-0.4-1-0.4-1.4 0L12 10.6 7.7 6.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4L10.6 12l-4.3 4.3c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3L12 13.4l4.3 4.3c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4L13.4 12l4.3-4.3c0.4-0.4 0.4-1 0-1.4z" fill="#ffffff"/>
+        </svg>
+      </div>
+      
+
+    <img src="assets/banner.jpg" alt="" class="mainbg">
+    <p>მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი</p>
+    <span>მოხვდი პოკერის ფესტივალზე მალტაში</span>
+    
+
+    <div class="header">
+        <div (click)="first()">
+            <span> 1 - 29 აპრილი</span>
+           
+            <br>
+            <span class="second"> Cash Games</span>
+          
+        </div>
+        <div (click)="onClick()">
+            <span> 13 - 29 აპრილი</span>
+            <br>
+            <span class="second">Spring Series</span>
+        </div>
+        <div>
+            <span>30 აპრილი</span>
+            <br>
+            <span class="second">Final Stage</span>
+        </div>
+
+    </div>
+
+    <ng-container *ngIf="secondTab">
+        <div class="secondHeader">
+            <div class="childHeader">
+                ᲢᲣᲠᲜᲘᲠᲔᲑᲘ ᲓᲐ ᲡᲐᲢᲔᲚᲘᲢᲔᲑᲘ
+            </div>
+
+            <p class="firstParagraph">სერიის ფარგლებში, ყოველდღიურად გაიმართება 3 ივენთი:</p>
+            <div class="clock">
+                <div class="circle">
+                    <svg style="fill:white;"  xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12Zm0-22C6.486,2,2,6.486,2,12s4.486,10,10,10,10-4.486,10-10S17.514,2,12,2Zm5,10c0-.553-.447-1-1-1h-3V6c0-.553-.448-1-1-1s-1,.447-1,1v6c0,.553,.448,1,1,1h4c.553,0,1-.447,1-1Z"/></svg>
+
+                </div>
+               <p id="time"> 19:00 / 19:30 / 20:00</p>
+            </div>
+
+            <img src="assets/promo-left-img.png" alt="" class="leftImg">
+            <img src="assets/promo-right-img.png" alt="" class="rightImg">
+
+            <p class="secondParagraph">* ყველა ტურნირზე მოხვედრა შესაძლებელია 0 ლარიდან.</p>
+            <p class="thirdParagraph">ტურნირების სრული განრიგის სანახავად გადადი<br> <span>პოკერის ლობიში</span> </p>
+
+            <button class="btn">პოკერის ლობი</button>
+        </div>
+    </ng-container>
+
+    <div class="wrapper"  [ngStyle]="secondTab ? {'height':'956pt'}:{'height':'1758pt'}">
+
+        <div class="topBorder"></div>
+
+        <div class="top">
+
+            <p *ngIf="!secondTab">1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ</p>
+            <p *ngIf="secondTab">ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ</p>
+        </div>
+
+        <div class="back" [ngStyle]="secondTab ? {'height':'92%'}: {'height':'95.7%'}">
+            <p class="titleTop">ჰოლდემის TOP20 ლიდერბორდი</p>
+            <img src="assets/example-icon.png" alt="" class="info">
+
+            <div class="first">
+                <div class="title left">ადგილი</div>
+                <img src="assets/watch-icon-sm.png" alt="" class="watchIcon">
+                <div class="title">ვაუჩერი</div>
+                <div class="title right">პრიზი</div>
+                
+
+                <div class="scrollWrapper">
+
+                    <div class="scrollWrapperContainer">
+                    <div class="child">
+                        <div class="nom">1</div>
+                        <div class="line">—</div>
+                        <img src="assets/travel-icon-sm.png" class="travel"><div class="prize1">A კატეგორიის საგზური</div>
+                        
+                    </div>
+                    <div class="child">
+                        <div class="nom">2</div>
+                        <div class="line">—</div>
+                        <img src="assets/ticket-icon-sm.png" alt="" class="ticket">
+                        <div class="prize1">B კატეგორიის საგზური</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">3</div>
+                        <div class="line">1 500 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">4</div>
+                        <div class="line">1 200 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">5</div>
+                        <div class="line">1 000 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">6</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">7</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">8</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">9</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">10</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">11</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">12</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">13</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">14</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">15</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">16</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">17</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">18</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">19</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">20</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    
+                </div>
+    
+                </div>
+            </div>
+
+
+
+            <div class="second"   *ngIf="firstTab">
+
+                <div>
+                    <img src="assets/travel-icon-sm.png" class="travel2">
+                    <p class="par1">The Festival in Malta-ს საგზური</p>
+                </div>
+                <div>
+                    <img src="assets/ticket-icon-sm.png" alt="" class="ticket2">
+                    <p class="par2">სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება <br>The Festival in Malta-ს საგზური</p>
+                </div>
+                <div>
+                    <img src="assets/watch-icon-sm.png" alt="" class="watchIcon2">
+                    <p class="par3">ტექნიკის მაღაზიის ვაუჩერი</p>
+                </div>
+
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+
+            </div>
+
+
+            <p class="parTop"  *ngIf="!secondTab" >TOP20 ლიდერბორდი ჰოლდემში</p>
+            <img  *ngIf="!secondTab" src="assets/example-icon.png" alt="" class="exampleIcon">
+
+            <div class="first"   *ngIf="!secondTab">
+                 <div class="title left">ადგილი</div>
+                <img src="assets/watch-icon-sm.png" alt="" class="watchIcon">
+                <div class="title">ვაუჩერი</div>
+                <div class="title right">პრიზი</div>
+                
+
+                <div class="scrollWrapper">
+
+                    <div class="scrollWrapperContainer">
+                    <div class="child">
+                        <div class="nom">1</div>
+                        <div class="line">—</div>
+                        <img src="assets/travel-icon-sm.png" class="travel"><div class="prize1">A კატეგორიის საგზური</div>
+                        
+                    </div>
+                    <div class="child">
+                        <div class="nom">2</div>
+                        <div class="line">—</div>
+                        <img src="assets/ticket-icon-sm.png" alt="" class="ticket">
+                        <div class="prize1">B კატეგორიის საგზური</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">3</div>
+                        <div class="line">1 500 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">4</div>
+                        <div class="line">1 200 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">5</div>
+                        <div class="line">1 000 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">6</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">7</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">8</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">9</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">10</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">11</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">12</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">13</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">14</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">15</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">16</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">17</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">18</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">19</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    <div class="child">
+                        <div class="nom">20</div>
+                        <div class="line">800 ₾</div>
+                        <div class="prize1">სპეც. ტურნირის ბილეთი</div>
+                    </div>
+                    
+                </div>
+    
+                </div> 
+            </div>
+
+            <div class="second">
+
+                <div>
+                    <img src="assets/travel-icon-sm.png" id="secondTravel" [ngStyle]="secondTab ? {'top':'62%'}:{ 'top':'82%'}">
+                    <p class="par1">The Festival in Malta-ს საგზური</p>
+                </div>
+                <div>
+                    <img src="assets/ticket-icon-sm.png" alt="" id="secondTicket" [ngStyle]="secondTab ? {'top':'72%'}:{ 'top':'87.5%'}"  >
+                    <p class="par2">სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება <br>The Festival in Malta-ს საგზური</p>
+                </div>
+                <div>
+                    <img src="assets/watch-icon-sm.png" alt="" id="secondWatch" [ngStyle]="secondTab ? {'top':'81%'}:{ 'top':'92.5%'}"  >
+                    <p class="par3">ტექნიკის მაღაზიის ვაუჩერი</p>
+                </div>
+
+                <div id="secondLine" [ngStyle]="secondTab ? {'top':'62%'}:{ 'top':'82%'}"  ></div>
+                <div id="thirdLine"  [ngStyle]="secondTab ? {'top':'71%'}:{ 'top':'87%'}"></div>
+                <div id="forthLine" [ngStyle]="secondTab ? {'top':'81%'}:{ 'top':'92.5%'}" ></div>
+
+            </div>
+
+
+            <img src="assets/star.png" alt="" class="star"  [ngStyle]="secondTab ? {'top':'94.5%'}:{ 'top':'97.8%'}" >
+            <p  class="lastPara">ლიდერბორდის შედეგები განახლდება<span class="small">პოკერის ლობიში</span></p>
+            <p *ngIf="secondTab" class="lastPara" style="top:95%; left:7%;" >* სატურნირო ლიდერბორდის ქულების დათვლაში არ მონაწილეობს ფრიროლები და სატელიტები</p>
+
+        </div>
+    </div>
+
+    <div class="midDiv" *ngIf="secondTab">
+        <p id="headertitle">ᲧᲝᲕᲔᲚᲓᲦᲘᲣᲠᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲘ ᲓᲐ ᲡᲐᲢᲔᲚᲘᲢᲔᲑᲘ</p>
+        <div>
+            <img src="assets/tournament-bg.png" alt="">
+            <div id="pare1">
+            <p class="name1">Holdem Highrollers</p>
+            <p class="name2">ბაი-ინი - 550₾</p>
+            </div>
+            <div id="pare2">
+                <p class="name3">50 000 ₾</p>
+                <p class="name4">27 აპრილი</p>
+               
+            </div>
+            
+        </div>
+        
+        <div>
+            <img src="assets/tournament-bg2.png" alt="">
+            <div id="pare3">
+                <p class="name1">Omaha Highrollers</p>
+                <p class="name2">ბაი-ინი - 550₾</p>
+                
+            </div>
+            <div id="pare4">
+                <p class="name3">50 000 ₾</p>
+                <p class="name4">28 აპრილი</p>
+                
+            </div>
+        </div>
+        <div>
+            <img src="assets/main-bg.png" alt="" class="lastImage">
+            <div id="pare5">
+                <p class="events">Main Events</p>
+                <p class="loc">ბაი-ინი - 550₾</p>
+                
+            </div>
+            <div id="pare6">
+                <p class="name3">150 000 ₾</p>
+                <p class="name6">29 აპრილი</p>
+                
+            </div>
+        </div>
+
+        <p id="footerTitle">* სამივე ტურნირის გამარჯვებულები მიიღებენ ბეჭდებს და ფინალურ ეტაპზე, The <br> Lord of the Rings ტურნირზე, იბრძოლებენ The Festival in Malta-ს საგზურის მისაღებად.</p>
+    </div>
+
+    <div class="add">
+        <div class="headerLine"></div>
+
+        <p id="addPara">ᲓᲐᲛᲐᲢᲔᲑᲘᲗ ᲨᲔᲓᲒᲔᲑᲐ, ᲥᲔᲨᲒᲔᲘᲛᲘᲡ, ᲢᲣᲠᲜᲘᲠᲔᲑᲘᲡ ᲓᲐ ᲡᲞᲘᲜ ᲞᲝᲙᲔᲠᲘᲡ<br><span id="spanTitle">12 SIDE ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲘ</span></p>
+
+        <img src="assets/star.png" alt="" id="secondStar">
+        <p id="addSecondPara">Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის ლობიში.</p>
+            
+
+    </div>
+
+    <p class="headerTitle">წესები და პირობები</p>
+    <div class="questionsDiv">
+        <div>
+            <p>როდის იწყება და რა ფორმატით გაიმართება აქცია</p>
+            <img src="assets/mechanic-icon.png" alt="" class="arrow1">
+        </div>
+        <div><p>
+            როგორ მივიღო აქციაში მონაწილეობა?
+        </p>
+        <img src="assets/mechanic-icon.png" alt="" class="arrow1">
+    </div>
+        <div>
+            <p>სხვადასვა</p>
+            <img src="assets/mechanic-icon.png" alt="" class="arrow1">
+        </div>
+    </div>
+
+    <p class="headerTitle2">მსგავსი აქციები</p>
+
+    <div class="footer">
+        <div class="footerContainer">
+        <div>
+            <img src="assets/Rounded Rectangle 595@2x.png" alt="" class="firstImage">
+            <p class="note1">Get 300% Cashback <br> <br><small>retrieve 300% bet amount as <br> real money only here</small></p>
+
+        </div>
+        <div>
+            <img src="assets/Rounded Rectangle 596@3x.png" alt="" class="secondImage">
+            <p class="note2">Coming Soon <br> <br><small>retrieve 300% bet amount as <br> real money only here</small></p>
+        </div>
+        <div>
+            <img src="assets/Rounded Rectangle 597.png" alt="" class="thirdImage">
+            <p class="note2">Win a Jackpot<br> <br><small>retrieve 300% bet amount as <br> real money only here</small></p>
+
+        </div>
+        <div>
+            <img src="assets/Rounded Rectangle 598.png" alt="" class="thirdImage">
+            <p class="note4">Get 300% Cashback<br> <br><small>retrieve 300% bet amount as <br> real money only here</small></p>
+        </div>
+    </div>
+    </div>
+
+    
+    <div class="fixedDiv">
+        <button>ითამაშე</button>
+    </div>
+</div>
