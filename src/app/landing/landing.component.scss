@@ -16,6 +16,15 @@
     border-radius: 13pt;
     overflow: auto;
     background-color: #1C1D1E;
+    @media only screen and (max-width: $minmobile) {
+    
+        width: 375pt;
+ 
+       margin: 0px;
+       overflow-x: hidden;
+    
+    }
+   
 
     .x-mark{
         width: 34pt;
@@ -25,6 +34,9 @@
         position: fixed;
         z-index: 1;
         cursor: pointer;
+        @media only screen and (max-width: $minmobile) {
+            display: none!important;
+        }
 
     }
 
@@ -46,6 +58,16 @@
             top: 5%;
             left: 18%;
             z-index: 1;
+            @media only screen and (max-width: $minmobile) {
+                top: 72%;
+                left: 10%;
+                width: 260pt;
+                height: 24pt;
+                position: absolute;
+            
+                
+                
+            }
 
             #slots{
                 border: 1px solid #2C3234 ;
@@ -60,6 +82,14 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @media only screen and (max-width: $minmobile) {
+                    font-size: 12pt;
+                    line-height: 15px;
+                    width: 75pt;
+                    height: 24pt;
+                    border-radius: 15pt;
+                
+                }
 
 
             }
@@ -68,10 +98,76 @@
                 font-size: 15pt;
                 line-height: 19px;
                 font-family: 'MyFont', sans-serif;
+                @media only screen and (max-width: $minmobile) {
+                    font-size: 14pt;
+                    line-height: 18px;
+                    opacity: 90%;
+                   
+
+                }
+
+
 
 
             }
             
+        }
+
+        .mobileheader{
+
+            display: none;
+            @media only screen and (max-width: $minmobile) {
+                display: block;
+                width: 375pt;
+                height: 56pt;
+                border-radius: 0pt 0pt 5pt 5pt;
+                background: #1C1D1E;
+                margin-top: 90pt !important;
+                margin-bottom: 20pt;
+                
+            }
+            
+    
+
+            .mobileLogo{
+                width: 24pt;
+                height: 24pt;
+                margin-left: 60pt;
+                margin-top: 25pt;
+
+
+            }
+
+            .firstBtn{
+                @include titles;
+                width: 72pt;
+                height: 32pt;
+                background: #1C1D1E;
+                font-size: 15pt;
+                line-height: 19px;
+                color: white;
+                border-radius: 5pt;
+                border: none;
+                margin-left: 80pt;
+                cursor: pointer;
+                font-weight: 100;
+
+
+            }
+            .secondBtn{
+                @include titles;
+                width: 72pt;
+                height: 32pt;
+                background: #EF602A;
+                font-size: 15pt;
+                line-height: 19px;
+                color: white;
+                border-radius: 5pt;
+                border: none;
+                cursor: pointer;
+                font-weight: 100;
+
+            }
         }
 
 
@@ -79,6 +175,22 @@
             width: 854pt;
             height: 315pt;
             margin-left: 43pt;
+            @media only screen and (max-width: $minmobile){
+                width: 240pt;
+                height: 420pt;
+    margin-left: 66pt;
+
+            }
+
+            .secondTopBorder{
+                @include border;
+                @media only screen and (max-width: $minmobile){
+                    width: 125pt;
+    height: 4pt;
+    left: 35%;
+
+                }
+            }
 
             .childHeader{
                 width: 100%;
@@ -93,12 +205,23 @@
                 justify-content: center;
                 align-items: center;
                 background: #2C3234;
+                @media only screen and (max-width: $minmobile){
+                    font-size: 16pt;
+    line-height: 20px;
+    text-align: center;
+                }
 
             }
             .firstParagraph{
                 margin-left: 177pt;
                 font-size: 16pt;
                 line-height: 20px;
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+                    margin-left: 10px;
+                   
+                    font-size: 13pt;
+                }
 
             }
             .secondParagraph{
@@ -106,6 +229,11 @@
                 opacity: 90%;
                 margin-top: 20px;
                 @include titles2;
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+                    margin-left: 25px;
+                    margin-top: 160px;
+                }
 
             
             }
@@ -113,9 +241,19 @@
                 @include titles2;
                 margin-left: 250pt;
                 opacity: 90%;
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+                    margin-left: 20pt;
+
+                }
                 span{
                     @include titles2;
                     margin-left: 105pt;
+                    @media only screen and (max-width: $minmobile){
+                        position: absolute;
+                        top: 177.8%;
+                        left: 25%;
+                    }
                    
                 }
             }
@@ -134,6 +272,10 @@
                 font-size: 15pt;
                 line-height: 19px;
                 cursor: pointer;
+                @media only screen and (max-width: $minmobile){
+                    margin-left: 50pt;
+                     margin-top: 25pt;
+                }
 
 
 
@@ -149,6 +291,9 @@
                 border-radius: 10pt;
                 box-shadow: 0pt 0pt 12pt #F05A22;
                 text-align: center;
+                @media only screen and (max-width: $minmobile){
+                    margin-left: 20pt;
+                }
                 
 
                 .circle{
@@ -177,6 +322,9 @@
                     line-height: 17px;
                     opacity: 90%;
                     margin-top: -34px;
+                    @media only screen and (max-width: $minmobile){
+                        display: block;;
+                    }
                 }
 
 
@@ -186,6 +334,9 @@
                 position: absolute;
                 top: 93.4%;
                 width: 30%;
+                @media only screen and (max-width: $minmobile){
+                    top: 150%;
+                }
 
             }
 
@@ -194,6 +345,10 @@
                 top: 95.5%;
                 width: 30%;
                 left: 65%;
+                @media only screen and (max-width: $minmobile){
+                    top: 150%;
+    left: 52%;
+                }
             }
 
         }
@@ -203,6 +358,10 @@
             width: 100%;
             height: 350pt;
             border: none;
+            @media only screen and (max-width: $minmobile) {
+                width: 100%;
+                height: 210pt;
+            }
            
         }
 
@@ -213,6 +372,20 @@
             line-height: 26px;
             color: #FFFFFF;
             margin-left: 43.5pt;
+            @media only screen and (max-width: $minmobile){display: none;}
+        }
+        .mobPar{
+            display: none;
+            @media only screen and (max-width: $minmobile){
+                font-size: 16pt;
+            line-height: 20px;
+            font-weight: 100;
+            margin-top: 12%;
+            margin-left: 75px;
+            display: block;
+
+                
+            }
         }
         span{
             font-size: 16pt;
@@ -222,6 +395,11 @@
             color: #FFFFFF;
             margin-left: 43.5pt;
             opacity: 90%;
+            @media only screen and (max-width: $minmobile){
+                font-size: 10pt;
+                line-height: 17px;
+                margin-left: 75px;
+            }
 
         }
 .header{
@@ -234,11 +412,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: $minmobile){
+        width: 240pt;
+        height: 77pt;
+        margin-left: 65pt;
+        margin-top: 40pt;
+        margin-right: 16pt;
+    
+    }
     
     div{
         width: 270pt;
         text-align: center;
         cursor: pointer;
+        @media only screen and (max-width: $minmobile){
+            width: 70pt;
+    height: 90pt;
+  
+    display: flex;
+    flex-direction: column;
+        }
         &:hover{
             height: 90pt;
             background: #EF5A21;
@@ -255,8 +448,41 @@
             line-height: 16px;
             color: #FFFFFF;
             opacity: 80%;
+            @media only screen and (max-width: $minmobile){
+                display: none;
+            }
            
           
+         }
+
+         .span4{
+            display: none;
+            @media only screen and (max-width: $minmobile){
+                @include titles;
+                display: inline-block;
+                font-size: 11pt;
+                line-height: 17px;
+                
+                font-weight: 100;
+                margin-left: 0px;
+                margin-top: 20px;
+            
+            }
+
+         }
+         .span2{
+            display: none;
+            @media only screen and (max-width: $minmobile){
+                @include titles;
+                font-size: 10pt;
+                line-height: 18px;
+                
+                font-weight: 100;
+                display: inline-block;
+                margin-left: 0px;
+    margin-top: 20px;
+            }
+            
          }
          .second{
             font-size: 18pt;
@@ -264,7 +490,69 @@
             font-weight: bold;
             line-height: 24px;
             color: #FFFFFF;
+
+            @media only screen and (max-width: $minmobile){
+                @include titles;
+                font-size: 14pt;
+                line-height: 17px;
+               
+                display: none;
+
+            }
             
+         }
+         .finalSecond{
+            @media only screen and (max-width: $minmobile){
+                @include titles;
+                font-size: 14pt;
+                line-height: 17px;
+                margin-left: 0px;
+    display: inline-block;
+
+         }
+        }
+         .octomber{
+            display: none;
+            @media only screen and (max-width: $minmobile){
+                @include titles;
+                font-size: 11pt;
+                line-height: 17px;
+                display: inline-block;
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+
+
+         }
+
+         .secondCash{
+            font-size: 18pt;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            line-height: 24px;
+            color: #FFFFFF;
+            @media only screen and (max-width: $minmobile){
+                @include titles;
+                font-size: 12pt;
+                line-height: 14px;
+                margin-left: 0px;
+                
+
+            }
+
+         }
+
+         .span3{
+            display: none;
+            @media only screen and (max-width: $minmobile){
+                display: inline-block;
+                @include titles;
+                font-size: 12pt;
+                line-height: 14px;
+                margin-left: 0px
+
+            }
+
          }
 
          
@@ -285,16 +573,22 @@
     border: 1px solid #2C3234;
     border-radius: 16pt 16pt 16pt 16pt;
 
+    @media only screen and (max-width: $minmobile){
+        width: 250pt;
+    margin-left: 62pt;
+    background: #2C3234;
+    border: 1px solid #2C3234;
+    }
+
     .topBorder{
-        width: 251pt;
-        height: 5pt;
-        border: 1px solid #F05A22;
-        border-radius: 0pt 0pt 4pt 4pt;
-        box-shadow: 0pt 0pt 10pt #F05A22;
-        position: absolute;
-        position: absolute;
-        left: 40%;
-        background: #F05A22;
+        
+        @include border;
+
+        @media only screen and (max-width: $minmobile){
+            width: 125pt;
+    left: 34%;
+    height: 4pt;
+        }
 
     }
     
@@ -318,6 +612,12 @@
             font-size: 18pt;
             color:#FFFFFF;
             text-align: center;
+            @media only screen and (max-width: $minmobile){
+                font-size: 16pt;
+                line-height: 20px;
+                margin-left: 20px;
+                display: block;
+            }
             
         }
     
@@ -334,6 +634,11 @@
         position: relative;
         border: 1px solid #171718;
         border-radius: 16pt 16pt 16pt 16pt;
+        @media only screen and (max-width: $minmobile){
+            width: 96%;
+            background: #2C3234;
+    border: 1px solid #2C3234;
+        }
 
 
 
@@ -344,6 +649,12 @@
             position: absolute;
             top: 10pt;
             left: 31%;
+            @media only screen and (max-width: $minmobile){
+                left: -16%;
+    font-size: 13pt;
+    line-height: 20px;
+    display: block;
+            }
             
 
         }
@@ -354,6 +665,10 @@
             top: 1.5%;
             opacity: 50%;
             box-shadow: 0pt 3pt 6pt #00000029;
+            @media only screen and (max-width: $minmobile){
+                left: 89%;
+    top: 1.3%;
+            }
         }
 
 
@@ -367,6 +682,11 @@
             position: relative;
             display: flex;
             justify-content: space-between;
+            @media only screen and (max-width: $minmobile){
+                width: 230pt;
+    height: 361pt;
+    margin-left: 5pt;
+            }
 
             .title{
                 @include titles;
@@ -375,10 +695,71 @@
                 color:#7D7D7D;
                 opacity: 90%;
                 margin-top: 31pt;
+                @media only screen and (max-width: $minmobile){
+                    margin-right: 60pt;
+
+                }
+            }
+            #top20{
+                @include titles;
+                font-size: 18pt;
+                line-height: 24px;
+                position: absolute;
+                top: -23%;
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+                    font-size: 16pt;
+                    line-height: 19px;
+                    margin-top: -20px;
+                }
+
+            }
+            #top2{
+                width: 300pt;
+                height: 40pt;
+                border-radius: 20pt;
+                border: 2pt solid #25292B;
+                background: #1E2122;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                @include titles;
+                font-weight: 100;
+                font-size: 13pt;
+                position: absolute;
+                padding-left: 20pt;
+                left: 30%;
+                top: -12%;
+                @media only screen and (max-width: $minmobile){
+                    margin-left: -86pt;
+                    width: 235pt;
+                    margin-top: 25pt;
+                
+                }
+            
+            }
+            #mechanicIcon{
+                position: absolute;
+                width: 40pt;
+                height: 40pt;
+                left: 65%;
+                top: -11.8%;
+                @media only screen and (max-width: $minmobile){
+                    left: 87.5%;
+                    top: -4.5%;
+                    width: 38pt;
+                    height: 38pt;
+
+                }
+
             }
 
             .left{
                 margin-left: 42pt;
+                @media only screen and (max-width: $minmobile){
+                    margin-left: 10pt;
+    margin-right: 30pt;
+                }
                 
                
             }
@@ -389,10 +770,18 @@
                 width: 20pt;
                 height: 12pt;
                 top: 8%;
+                @media only screen and (max-width: $minmobile){
+                    left: 40%;
+                    top: 10%;
+                    display: none;
+                }
             }
         
             .right{
                 margin-right: 122pt;
+                @media only screen and (max-width: $minmobile){
+                    margin-left: -25pt;
+                }
                
             }
 
@@ -406,12 +795,22 @@
                 align-items: baseline;
                 margin-left: 32pt;
                 overflow-y: scroll; 
+
+                @media only screen and (max-width: $minmobile){
+                    left: -10%;
+                    top: -5%;
+                    overflow-x: hidden;
+                
+                }
                 
 
 
                 .scrollWrapperContainer{
     
                     max-height: 470px;
+                    @media only screen and (max-width: $minmobile){
+                        max-height: 387px;
+                    }
                 }
 
                 .child{
@@ -423,6 +822,10 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: baseline;
+                    @media only screen and (max-width: $minmobile){
+                        width: 88%;
+                        height: 45pt;
+                    }
 
         
 
@@ -431,6 +834,12 @@
                         font-size: 14pt;
                         line-height: 21px;
                         margin-left: 55pt;
+                        @media only screen and (max-width: $minmobile){
+                            font-size: 9pt;
+    line-height: 10px;
+    text-align: center;
+    white-space: nowrap;
+                        }
                     }
                     
 
@@ -438,11 +847,17 @@
                         position: absolute;
                         left: 69%;
                         top: 5%;
+                        @media only screen and (max-width: $minmobile){
+                            display: none;
+                        }
                     }
                     .ticket{
                         position: absolute;
                         left: 69%;
                         top: 22%;
+                        @media only screen and (max-width: $minmobile){
+                            display: none;
+                        }
                     }
                     .prize1{
                         margin-right: 37pt;
@@ -450,6 +865,12 @@
                         font-size: 13pt;
                         line-height: 7px;
                         font-weight: 500;
+                        @media only screen and (max-width: $minmobile){
+                            font-size: 10pt;
+                            line-height: 12px;
+                            margin-left: 40pt;
+                            font-weight: 100;
+                        }
                     }
 
                     
@@ -470,6 +891,10 @@
                         font-size: 13pt;
                         color:#FFFFFF;
                         line-height: 7px;
+                        @media only screen and (max-width: $minmobile){
+                            width: 10pt;
+                            height: 10pt;
+                        }
                     }
 
                 }
@@ -495,6 +920,11 @@
             
         }
 
+        
+        .first2{
+            margin-top: 110pt;
+        }
+
 
         .second{
             width: 806pt;
@@ -507,6 +937,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
+            @media only screen and (max-width: $minmobile){
+                width: 230pt;
+    margin-left: 5pt;
+    height: 235pt;
+            }
             
 
             div{
@@ -515,6 +950,12 @@
                 border: 1px solid #202324;
                 border-radius: 12pt;
                 height: 72pt;
+
+                @media only screen and (max-width: $minmobile){
+                    width: 215pt;
+    
+                    height: 63pt;
+                }
                 
 
 
@@ -526,6 +967,9 @@
                 top: 34%;
                 width: 35pt;
                 height: 35pt;
+                @media only screen and (max-width: $minmobile){
+                    top: 27.5%;
+                }
             }
             .ticket2{
 
@@ -534,6 +978,9 @@
                 top: 39%;
                 width: 35pt;
                 height: 35pt;
+                @media only screen and (max-width: $minmobile){
+                    top: 32%;
+                }
 
             }
             .watchIcon2{
@@ -542,15 +989,13 @@
                 top: 44%;
                 width: 35pt;
                 height: 35pt;
+                @media only screen and (max-width: $minmobile){
+                    top: 36.5%;
+                }
 
             }
 
-            // @font-face {
-            //     font-family: 'MyFont';
-            //     src: url('/assets/Linotype-HelveticaNeueLTGEO75Bold.ttf');    
-            //     font-weight: normal;
-            //     font-style: normal;
-            //   }
+           
             .par1{
                 margin-left: 74pt;
                 margin-top: 26pt;
@@ -558,6 +1003,13 @@
                 line-height:16px;
                 font-family: 'MyFont', sans-serif;
                 font-weight: 100;
+                @media only screen and (max-width: $minmobile){
+                    font-size: 13pt;
+    line-height: 16px;
+    display: block;
+    margin-left: 50pt;
+    margin-top: 20px;
+                }
             }
             .par2{
                 margin-left: 74pt;
@@ -566,6 +1018,13 @@
                 line-height:20px;
                 font-family: 'MyFont', sans-serif;
                 font-weight: 100;
+                
+                @media only screen and (max-width: $minmobile){
+                    font-size: 11pt;
+                    line-height: 15px;
+                    display: block;
+                    margin-top: -1px;
+                }
 
             }
 
@@ -577,6 +1036,11 @@
                 line-height:20px;
                 font-family: 'MyFont', sans-serif;
                 font-weight: 100;
+                @media only screen and (max-width: $minmobile){
+                    font-size: 13pt;
+    line-height: 16px;
+    display: block;
+                }
 
             }
 
@@ -586,20 +1050,31 @@
                 @include line;
                 left: 5%;
                 top: 33.5%;
+                @media only screen and (max-width: $minmobile){
+                    top: 27.2%;
+                }
             }
             .line3{
                 @include line;
                 left: 5%;
                 top: 38.5%;
+                @media only screen and (max-width: $minmobile){
+                    top: 31.5%;
+                }
             }
             .line4{
                 @include line;
                 left: 5%;
                 top: 44%;
+                @media only screen and (max-width: $minmobile){
+                    top: 36.5%;
+                }
 
             }
 
         }
+
+        
 
         .parTop{
             position: absolute;
@@ -623,37 +1098,93 @@
             @include orangeLine;
             left: 5%;
             top: 82%;
+            @media only screen and (max-width: $minmobile){
+                 top: 67.8% !important;
+                
+
+            }
         }
+
+        .seccLine{
+            display: none;
+            @media only screen and (max-width: $minmobile){
+                display: block;
+            top: 55% !important;
+                height: 28pt;
+                width: 4pt;
+                left: 5%;
+                border-radius: 0pt 4pt 4pt 0pt;
+            }
+
+        }
+
+       
         #thirdLine{
             @include orangeLine;
             left: 5%;
             top: 87%;
+            @media only screen and (max-width: $minmobile){
+                top: 72.2% !important;
+            }
         }
         #forthLine{
             @include orangeLine;
             left: 5%;
             top: 92.5%;
+            @media only screen and (max-width: $minmobile){
+                
+    top: 76.5% !important;
+
+            }
         }
-        #secondTravel{
+        .secondTravel{
             position: absolute;
             left: 8.5%;
             top: 82%;
             width: 35pt;
             height: 35pt;
+            @media only screen and (max-width: $minmobile){
+                top: 68% !important;
+            }
         }
-        #secondTicket{
+
+        .secTravel{
+            @media only screen and (max-width: $minmobile){
+                top: 55% !important;
+            }
+
+        }
+        .secondTicket{
             position: absolute;
             left: 8.5%;
             top: 87.5%;
             width: 35pt;
             height: 35pt;
+            @media only screen and (max-width: $minmobile){
+                top: 72.5% !important;
+            }
         }
-        #secondWatch{
+        .secTicket{
+            @media only screen and (max-width: $minmobile){
+                top: 62.5% !important;
+            }
+
+        }
+        .secondWatch{
             position: absolute;
             left: 8.5%;
             top: 92.5%;
             width: 35pt;
             height: 35pt;
+            @media only screen and (max-width: $minmobile){
+                top: 77% !important;
+            }
+        }
+        .secWatch{
+            @media only screen and (max-width: $minmobile){
+                top: 71% !important;
+            }
+
         }
 
         .lastPara{
@@ -663,6 +1194,16 @@
             font-weight: 100;
             position: absolute;
             left: 19%;
+            top: 92.5%;
+            @media only screen and (max-width: $minmobile){
+
+                display: block;
+                font-size: 13pt;
+                line-height: 16px;
+                top: 81%;
+                left: -5%;
+
+            }
 
             .small{
                 margin-left: 6px;
@@ -675,6 +1216,44 @@
                 cursor: pointer;
             }
         }
+        .damateba{
+            @include titles;
+            font-size: 14pt;
+            line-height: 18pt;
+            font-weight: 100;
+            position: absolute;
+           
+            top: 95%;
+            left: 7%;
+            @media only screen and (max-width: $minmobile){
+                top: 85%;
+                display: block;
+                left: -4%;
+
+
+            }
+        }
+
+        .lastParagraph{
+            display: none;
+           
+            @media only screen and (max-width: $minmobile){
+                @include titles;
+                font-size: 14pt;
+                line-height: 18pt;
+                font-weight: 100;
+                position: absolute;
+                
+                display: block;
+                font-size: 13pt;
+                line-height: 16px;
+                top: 85%;
+                
+
+            }
+
+        }
+
 
         .star{
             position: absolute;
@@ -682,11 +1261,312 @@
             top: 97.8%;
             width: 7pt;
         }
+
+
+        .tourImage{
+            margin-left: 22pt;
+            margin-right: 24pt;
+            width: 806pt;
+            height: 280pt;
+            margin-top: 24pt;
+            border-radius: 12pt;
+            @media only screen and (max-width: $minmobile){
+                margin-top: 0pt;
+    width: 100%;
+    height: 201pt;
+    margin-left: 0pt;
+            }
+            
+        }
+
+        .maltaPara{
+            margin-left: 284pt;
+            font-size: 14pt;
+            line-height: 20px;
+            @media only screen and (max-width: $minmobile){
+                display: block;
+    
+    margin-left: 8pt;
+    font-size: 11pt;
+    line-height: 17px;
+    font-weight: 300;
+            }
+        }
+
+        .festivalPara{
+            margin-left: 95pt;
+            font-size: 14pt;
+            line-height: 20px;
+            @media only screen and (max-width: $minmobile){
+                display: block;
+   
+    margin-left: 8pt;
+    font-size: 14pt;
+    line-height: 18px;
+    font-weight: 300;
+            }
+
+            span{
+                @include titles;
+                margin-left: 180pt;
+                font-size: 14pt;
+                line-height: 20px;
+                opacity: 100%;
+
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+    
+    margin-left: 0pt;
+    font-size: 14pt;
+    line-height: 18px;
+    font-weight: 300;
+
+                }
+            }
+
+        }
+
+        .middleNote{
+            width: 500pt;
+            height: 50pt;
+            border: 1px solid #2C3234;
+            border-radius: 12pt;
+            background: #2C3234;
+            margin-left: 150pt;
+            margin-top: 20pt;
+            @include titles;
+            font-size: 14pt;
+            line-height: 20px;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: $minmobile){
+                display: block;
+    
+    margin-left: 5pt;
+    font-size: 11pt;
+    line-height: 17px;
+    font-weight: 300;
+    width: 230pt;
+    border-radius: 8pt;
+    border: 1px solid #2C3234;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+
+            }
+
+        }
+
+        .orangeLine1{
+            @include orangeLine;
+            height: 40pt;
+            position: absolute;
+            right: 81.6%;
+            top: 42%;
+            border-radius: 4pt;
+
+            @media only screen and (max-width: $minmobile){
+                
+                width: 4pt;
+                height: 25pt;
+               
+                top: 21%;
+                left: 2%;
+                border-radius: 0pt 4pt 4pt 0pt;
+            }
+
+        }
+
+        .contents{
+            width: 804pt;
+            height: 383pt;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20pt;
+            margin-top: 50pt;
+            color: red;
+
+            @media only screen and (max-width: $minmobile){
+                display: block;
+            }
+
+            .contentWrapper{
+                width: 258pt;
+    height: 383pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media only screen and (max-width: $minmobile){
+        width: 230pt;
+    margin-left: -15pt;
+    margin-top: -35pt;
+    margin-bottom: 50pt;
+
+    }
+}
+
+            
+
+            div{
+                width: 258pt;
+                height: 100%;
+                border: 1pt solid #25292B;
+                background: #25292B;
+                border-radius: 14pt;
+                margin-left: 8pt;
+
+                .orangeLine2{
+                    @include orangeLine;
+                    width: 100pt;
+                    height: 4pt;
+                    position: absolute;
+                    margin-left: 9%;
+                    top: 52.5%;
+                    @media only screen and (max-width: $minmobile){
+                        width: 100pt;
+                        height: 4pt;
+                        top: 24.4%;
+                        left: 15%;
+                    
+                    }
+
+
+                }
+
+                .orangeLine3{
+                    display: none;
+                    @media only screen and (max-width: $minmobile){
+                        @include orangeLine;
+                        width: 100pt;
+                        height: 4pt;
+                        position: absolute;
+                         display: block;
+                        
+                        width: 100pt;
+                        height: 4pt;
+                        top: 49.9%;
+                        left: 25%;
+                        
+                    }
+                    
+
+
+                }
+                .orangeLine4{
+                    display: none;
+                    @media only screen and (max-width: $minmobile){
+                        @include orangeLine;
+                        width: 100pt;
+                        height: 4pt;
+                        position: absolute;
+                         display: block;
+                        
+                        width: 100pt;
+                        height: 4pt;
+                        top: 75.2%;
+                        left: 25%;
+                    }
+
+                }
+
+                .headerWrapper{
+                    
+                    width: 258pt;
+                    height: 53pt;
+                    border-radius: 10pt 10pt 0pt 0pt;
+                    background: #2C3234;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include titles;
+                    font-size: 14pt;
+                    line-height: 18px;
+                    font-weight: 300;
+                    margin-top: -5pt;
+                    margin-left: -1px;
+                    @media only screen and (max-width: $minmobile){
+                        width: 100%;
+                    }
+                }
+
+
+        
+
+                div{
+                    width: 242pt;
+                    height: 56pt;
+                    border: 1px solid #1C1D1E;
+                    border-radius: 12pt;
+                    background: #1C1D1E;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @media only screen and (max-width: $minmobile){
+                        width: 220pt;
+                        margin-left: 5px;
+                    }
+
+
+                    .icon1{
+                        width: 32pt;
+                        height: 32pt;
+                        margin-left: 8pt
+
+                    }
+
+                    .para1{
+                        @include titles;
+                        font-size: 13pt;
+                        line-height: 14px;
+                        font-weight: 300;
+                        margin-right: 40px;
+                        @media only screen and (max-width: $minmobile){
+                            margin-right: 10pt;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        
+    }
+
+    .secondBack{
+        
+        height: 99%;
+        margin: 5pt 4.5pt 0pt 4.5pt;
+    }
+
+    .thirdBack{
+        height: 960pt;
+        margin: 5pt 4.5pt 0pt 4.5pt;
+        
+        @media only screen and (max-width: $minmobile){
+            height: 1570pt;
+            background: #171718;
+        }
     }
 
 
     
     
+}
+
+.secondWrapper{
+    height: 956pt;
+}
+
+.thirdWrapper{
+    height: 131%;
 }
 
 .midDiv{
@@ -698,6 +1578,16 @@
     display: flex;
     border-radius: 16pt;
     flex-wrap: wrap;
+    @media only screen and (max-width: $minmobile){
+        width: 240pt;
+        height: 450pt;
+    margin-left: 64pt;
+    display: flex;
+    border-radius: 16pt;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: unset;
+    }
     
     div:nth-child(2){
         
@@ -707,6 +1597,15 @@
         border:1pt solid #000000;
         border-radius: 12pt;
         margin-left: 24pt;
+        @media only screen and (max-width: $minmobile){
+            width: 230pt;
+            height: 60pt;
+            flex-grow: unset;
+            margin-bottom: 20pt;
+    margin-left: 5pt;
+
+
+        }
     }
     div:nth-child(3){
        
@@ -717,6 +1616,14 @@
         border:1pt solid #000000;
         border-radius: 12pt;
         margin-right: 24pt;
+        @media only screen and (max-width: $minmobile){
+            width: 230pt;
+            height: 60pt;
+            flex-grow: unset;
+            margin-bottom: 20pt;
+    margin-left: 5pt;
+
+        }
     }
     div:nth-child(4){
        
@@ -727,10 +1634,22 @@
         border-radius: 12pt;
         margin-left: 24pt;
         margin-right: 24pt;
+        @media only screen and (max-width: $minmobile){
+            width: 230pt;
+            height: 60pt;
+            flex-basis: unset;
+            margin-bottom: 20pt;
+    margin-left: 5pt;
+
+        }
     }
 
     img{
         width: 100%;
+        @media only screen and (max-width: $minmobile){
+            width: 100%;
+    height: 100%;
+        }
     }
 
     #footerTitle{
@@ -740,11 +1659,25 @@
         font-family: 'Lato', sans-serif;
         font-weight: 100;
         margin-left: 200pt;
+        @media only screen and (max-width: $minmobile){
+            margin-left: 0pt;
+            display: block;
+            @include titles;
+            font-size: 14pt;
+            line-height: 17px;
+        }
 
     }
     #headertitle{
         @include titles;
         margin-left: 200pt;
+        @media only screen and (max-width: $minmobile){
+            margin-left: 10pt;
+            display: block;
+            font-size: 14pt;
+            line-height: 18px;
+            margin-top: -25pt;
+        }
     }
 
 
@@ -752,6 +1685,13 @@
         @include pare;
         top: 267%;
         left: 3%;
+         @media only screen and (max-width: $minmobile){
+            top: 389%;
+    left: 0%;
+    
+    margin-left: 70pt;
+    width: 235pt;
+         }
        
        
     }
@@ -760,12 +1700,35 @@
         font-size: 15pt;
         line-height: 20px;
         font-weight: bold;
+        @media only screen and (max-width: $minmobile){
+            display: block;
+            font-size: 10pt;
+            line-height: 20px;
+            margin-left: 20px;
+        }
     }
     .name2{
         @include titles2;
         font-size: 13pt;
         line-height: 17px;
+        @media only screen and (max-width: $minmobile){
+            display: block;
+    font-size: 12pt;
+    line-height: 17px;
+        }
         
+
+    }
+
+    .name2Mob{
+        display: none;
+        @media only screen and (max-width: $minmobile){
+            @include titles2;
+        font-size: 13pt;
+        line-height: 17px;
+        display: block;
+
+        }
 
     }
 
@@ -773,6 +1736,15 @@
         @include pare;
         top: 270%;
         left: 3.5%;
+        @media only screen and (max-width: $minmobile){
+            position: absolute;
+    display: flex;
+    width: 100%;
+    border: none;
+    top: 270%;
+    left: 3.5%;
+        }
+
 
         
 
@@ -782,46 +1754,115 @@
         color:#FFBE00;
         line-height: 20px;
         font-size: 24pt;
+        @media only screen and (max-width: $minmobile){
+            display: block;
+            font-size: 20pt;
+            margin-top: 180%;
+            margin-left: 20%;
+    
+        }
         
+
+    }
+
+    #name33{
+        @media only screen and (max-width: $minmobile){
+            margin-top: 5%;
+    margin-left: 5%;
+
+        }
 
     }
     .name4{
         @include date;
 
         margin-left: 90px;
+        @media only screen and (max-width: $minmobile){
+            display: block;
+    margin-top: 180%;
+    margin-left: 6%;
+    font-size: 14pt;
+    width: 25%;
+    line-height: 17px;
+    height: 35%;
+        }
 
+    }
+    #name44{
+        @media only screen and (max-width: $minmobile){
+        margin-top: 5%;
+    margin-left: 20%;
+    font-size: 14pt;
+    width: 35%;
+    line-height: 17px;
+    height: 50%;
+        }
     }
 
     #pare3{
         @include pare;
         top: 267%;
         left: 47%;
+        @media only screen and (max-width: $minmobile){
+            height: 35pt;
+    width: 230pt;
+   
+    top: 404%;
+    left: 18%;
+        }
     }
 
     #pare4{
         @include pare;
         top: 270%;
         left: 47.5%;
+        @media only screen and (max-width: $minmobile){
+            height: 35pt;
+    width: 230pt;
+   
+    top: 409%;
+    left: 18%;
+        }
     }
-    .lastImage{
-
-    }
+    
     #pare5{
         @include pare;
         top: 281%;
         left: 30%;
+        @media only screen and (max-width: $minmobile){
+            height: 35pt;
+    width: 230pt;
+   
+    top: 419.5%;
+    left: 18%;
+        }
 
     .events{
         @include titles2;
         font-size: 22pt;
         line-height: 20px;
         font-weight: bold;
+        @media only screen and (max-width: $minmobile){
+            font-size: 10pt;
+    display: block;
+    line-height: 20px;
+    margin-top: 3pt;
+    margin-left: 20pt;
+
+        }
     }
     .loc{
         @include titles2;
         font-size: 16pt;
         line-height: 17px;
         font-weight: bold;
+        @media only screen and (max-width: $minmobile){
+            font-size: 10pt;
+    display: block;
+    line-height: 20px;
+    margin-top: 3pt;
+    margin-left: 70pt;
+        }
     }
 
     }
@@ -829,6 +1870,13 @@
         @include pare;
         top: 286%;
         left: 30%;
+        @media only screen and (max-width: $minmobile){
+            height: 35pt;
+    width: 230pt;
+   
+    top: 424%;
+    left: 18%;
+        }
 
     .name6{
         @include date;
@@ -836,7 +1884,27 @@
         color:#094B3D;
         font-size: 16pt;
         line-height: 20px;
+        @media only screen and (max-width: $minmobile){
+           
+   
+    line-height: 17px;
+    height: 35%;
+    margin-top: 5pt;
+    font-size: 14pt;
+    width: 35%;
+    line-height: 17px;
+    height: 35%;
+    margin-left: 40px;
 
+        }
+
+    }
+    #number{
+        margin-top: 2%;
+        font-size: 20pt;
+        line-height: 24px;
+        
+        margin-left: 15pt;
     }
     }
 
@@ -852,12 +1920,22 @@
     margin-bottom: 55pt;
     margin-left: 43pt;
     background-color: #2C3234;
+    @media only screen and (max-width: $minmobile){
+        width: 250pt;
+    height: 142pt;
+    margin-left: 80px;
+    }
 
     .headerLine{
         @include orangeLine;
         width: 251pt;
         height: 5pt;
         margin-left: 295pt;
+        @media only screen and (max-width: $minmobile){
+            width: 125pt;
+            height: 4pt;
+            left: -45%;
+        }
         
     }
 
@@ -865,12 +1943,24 @@
         @include titles;
         margin-top: 24pt;
         margin-left: 100pt;
+        @media only screen and (max-width: $minmobile){
+            display: block;
+            font-size: 12pt;
+            line-height: 20px;
+            margin-left: 14px;
+        }
 
     }
     #spanTitle{
         @include titles;
         margin-left: 220pt;
         opacity: 100%;
+        
+        @media only screen and (max-width: $minmobile){
+            font-size: 14pt;
+            line-height: 20px;
+            margin-left: 20pt;
+        }
 
 
     }
@@ -879,6 +1969,10 @@
         position: absolute;
         left: 16%;
         width: 7pt;
+        @media only screen and (max-width: $minmobile){
+            top: 383%;
+            left: 24.5%;
+        }
 }
 
     #addSecondPara{
@@ -892,6 +1986,14 @@
         left: 12%;
         margin-top: -1px;
         font-weight: 100;
+         
+        @media only screen and (max-width: $minmobile){
+            font-size: 15pt;
+            line-height: 16px;
+            display: block;
+            font-weight: 100;
+            margin-left: 20pt;
+        }
     }
     
 
@@ -899,12 +2001,15 @@
 
 }
 
-.headerTtile{
+.headerTitle{
     @include titles;
     line-height: 32px;
     font-family: 'MyFont', sans-serif;
     font-weight: 100;
-
+    @media only screen and (max-width: $minmobile){
+        display: block;
+    margin-left: 85px;
+    }
 }
 
 .questionsDiv{
@@ -916,7 +2021,10 @@
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 54pt;
-
+    @media only screen and (max-width: $minmobile){
+        width: 250pt;
+    margin-left: 80px;
+    }
 
     div{
         border: 2px solid blue;
@@ -935,11 +2043,20 @@
             line-height: 21.6px;
             font-weight: 100;
             margin-top: 20pt;
+            @media only screen and (max-width: $minmobile){
+                display: block;
+    font-size: 11pt;
+    line-height: 17px;
+    margin-left: 20px;
+            }
 
         }
 
         .arrow1{
             @include arrow;
+            @media only screen and (max-width: $minmobile){
+                left: 73%;
+            }
         }
         
     }
@@ -950,6 +2067,12 @@
 .headerTitle2{
     margin-bottom: 32pt;
     font-weight: 100;
+    @media only screen and (max-width: $minmobile){
+        display: block;
+    margin-left: 85px;
+    @include titles;
+
+    }
 }
 
 .footer{
@@ -961,6 +2084,9 @@
     margin-bottom: 100pt;
     justify-content: space-between;
     overflow-x: auto;
+    @media only screen and (max-width: $minmobile){
+        width: 350pt;
+    }
 
     .footerContainer{
         
@@ -1035,6 +2161,406 @@
    
 
 }
+.cardsContainer{
+    width: 854pt;
+    height: 573pt;
+    border: 4pt solid #25292B;
+    background: #171718;
+    border-radius: 16pt;
+    margin-top: 20pt;
+    margin-left: 43pt;
+    display: flex;
+
+    @media only screen and (max-width: $minmobile){
+        margin-left: 62pt;
+   
+    margin-top: 235%;
+    
+    width: 65%;
+    height: 806pt;
+    }
+
+    .cardsHeader{
+        background: #2C3234;
+        border: 1px solid #2C3234;
+        border-radius: 16pt 16pt 0pt 0pt;
+        width: 100%;
+        height: 72pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include titles;
+        @media only screen and (max-width: $minmobile){
+            font-size: 16pt;
+    line-height: 20px;
+    
+    font-weight: 600;
+    text-align: center;
+        }
+
+    }
+    .leftBox {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        top: 225%;
+        left: 7%;
+
+        @media only screen and (max-width: $minmobile){
+            height: 250pt;
+    top: 430%;
+    width: 275pt;
+
+        }
+        
+        .box {
+            width: 395pt;
+            height: 97pt;
+            margin-bottom: 20pt;
+            background: #1E2122;
+            border-radius: 12pt;
+            @media only screen and (max-width: $minmobile){
+                width: 230pt;
+                margin-left: 46pt;
+            }
+
+            .firstname{
+                @include titles;
+                font-size: 16pt;
+                line-height: 18px;
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+                    margin-left: 10pt;
+                    font-size: 15pt;
+                    line-height: 18px;
+                }
+
+            }
+            .travel1{
+                @include titles;
+                font-size: 14pt;
+                line-height: 18px;
+
+            }
+            .pokerItem{
+                @include item;
+                top: 0.3%;
+                @media only screen and (max-width: $minmobile){
+                    width: 63pt;
+                    height: 32pt;
+                }
+            }
+            .pokerItem2{
+                @include item;
+                top: 33.5%;
+                @media only screen and (max-width: $minmobile){
+                    width: 63pt;
+                    height: 32pt;
+                }
+
+            }
+            .pokerItem3{
+                @include item;
+                top: 67%;
+                @media only screen and (max-width: $minmobile){
+                    width: 63pt;
+                    height: 32pt;
+                }
+
+            }
+        }
+      }
+      .rightBox {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        left: 51.5%;
+        top: 225%;
+
+        @media only screen and (max-width: $minmobile){
+            height: 250pt;
+    top: 480%;
+    width: 275pt;
+        }
+        
+        .box {
+            width: 395pt;
+            height: 155pt;
+            background-color: #1E2122;
+            margin-bottom: 21pt;
+            border-radius: 12pt;
+            @media only screen and (max-width: $minmobile){
+                width: 230pt;
+                margin-left: -120pt;
+            }
+
+
+            .firstname2{
+                @include titles;
+                font-size:16pt;
+                line-height: 18px;
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+                    font-size: 13pt;
+                    line-height: 18px;
+                    margin-left: 5%;
+                }
+
+            }
+            .firstname3{
+                @include titles;
+                font-size: 14pt;
+                line-height: 18px;
+                font-weight: 100;
+                @media only screen and (max-width: $minmobile){
+                    display: block;
+                    font-size: 13pt;
+                    line-height: 18px;
+                    margin-left: 5%;
+                }
+            }
+            .pokerItem4{
+                @include item;
+                top: 0.3%;
+                @media only screen and (max-width: $minmobile){
+                    width: 63pt;
+                    height: 32pt;
+                  
+                    left: 15%;
+                }
+
+            }
+            .pokerItem5{
+                @include item;
+                top:50.3%;
+                @media only screen and (max-width: $minmobile){
+                    width: 63pt;
+                    height: 32pt;
+                    top:62%;
+                    left: 15%;
+                }
+
+            }
+        }
+      }
+
+      .lastPara2{
+        @include titles;
+        font-size: 14pt;
+        line-height: 18px;
+        font-weight: 100;
+        position: absolute;
+        top: 272%;
+        left: 10%;
+        span{
+            @include span;
+            margin-left:155pt;
+            
+        }
+      }
+
+      .lastPara3{
+        @include titles;
+        font-size: 14pt;
+        line-height: 18px;
+        font-weight: 100;
+        position: absolute;
+        top: 278%;
+        left: 15%;
+        span{
+            @include span;
+            margin-left: 165pt;
+           
+        }
+
+      }
+}
+
+
+.lastList{
+    width: 854pt;
+    height: 622pt;
+    border: 4pt solid #25292B;
+    background: #171718;
+    border-radius: 16pt;
+    margin-top: 20pt;
+    margin-left: 43pt;
+   
+    justify-content: space-between;
+    @media only screen and (max-width: $minmobile){
+        width: 230pt;
+    margin-left: 70pt;
+    }
+
+    .lastListHeader{
+        background: #2C3234;
+        border: 1px solid #2C3234;
+        border-radius: 16pt 16pt 0pt 0pt;
+        width: 100%;
+        height: 79pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include titles;
+        font-size: 35pt;
+        font-family: 'MyFont', sans-serif;
+        color: #DAA520;
+
+        @media only screen and (max-width: $minmobile){
+            font-size: 17pt;
+        }
+
+
+        .newLine{
+            @include line;
+            height: 5pt;
+            width: 251pt;
+            position: absolute;
+            left: 37%;
+            top: 292.5%;
+            @media only screen and (max-width: $minmobile){
+                top: 563.5%;
+                width: 125pt;
+                height: 4pt;
+                margin-left: -20pt;
+            }
+        
+
+        }
+        .keyImg{
+            height: 45pt;
+            width: 45pt;
+            position: absolute;
+            top: 295%;
+            left: 25%;
+            @media only screen and (max-width: $minmobile){
+                width: 28pt;
+                height: 20pt;
+                top: 570%;
+                left: 20%;
+            }
+        
+        }
+    }
+
+    .lastParaPrize{
+        @include titles;
+        font-size: 14pt;
+        line-height: 20px;
+        font-weight: 300;
+        margin-left: 80pt;
+    }
+
+
+    .scrollable{
+        width: 806pt;
+        height: 410pt;
+        border: 1px solid #25292B;
+        border-radius: 12pt;
+        background: #25292B;
+        margin-left: 24pt;
+        margin-top: 58pt;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      
+        @media only screen and (max-width: $minmobile){
+            width: 230pt;
+            margin-top: -7pt;
+            margin-left: 0pt;
+        }
+
+        .innerScrollable{
+            max-height: 525px;
+            overflow-y: scroll;
+        
+
+
+        div{
+            width: 742pt;
+            height: 56pt;
+            border: 2pt solid #2C3234;
+            background: #1E2122;
+            margin-bottom: 6pt;
+            margin-left: 22pt;
+            border-radius: 76pt;
+            display: flex;
+       
+            align-items: center;
+            
+            @media only screen and (max-width: $minmobile){
+                width: 98%;
+                margin-left: 0pt;
+            }
+        }
+    
+    
+
+        .circle2{
+            background: #2C3234;
+            border-radius: 50%;
+            
+            width: 28pt;
+            height: 28pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include titles;
+            font-size: 13pt;
+            line-height: 7px;
+            
+            top:-15%;
+            @media only screen and (max-width: $minmobile){
+                width: 24pt;
+                height: 24pt;
+                font-size: 10pt;
+                line-height: 7px;
+                margin-left: 20pt;
+
+            }
+
+        }
+    
+        .tourPar{
+            @include titles;
+            font-size: 14pt;
+            line-height: 21px;
+          
+            font-weight: 100;
+            @media only screen and (max-width: $minmobile){
+                font-size: 12pt;
+                line-height: 18px;
+                display: block;
+                margin-left: 20pt;
+            }
+        }
+        }
+        .innerScrollable::-webkit-scrollbar {
+            background-color: #2C3234;
+            border: 1px solid #2C3234;
+            border-radius: 2pt;
+            opacity: 50%;
+            width: 4pt;
+          }
+     
+
+        .innerScrollable::-webkit-scrollbar-thumb {
+            width: 4pt;
+            border: 2px solid #F05A22;
+            border-radius: 2pt 2pt 2pt 2pt;
+            background-color: #F05A22;
+          }
+    
+    }
+
+
+}
 
 .fixedDiv{
     width: 940pt;
@@ -1058,6 +2584,15 @@
         font-size: 15pt;
         line-height: 19px;
         cursor: pointer;
+
+        @media only screen and (max-width: $minmobile){
+            margin-left: -60%;
+            width: 134pt;
+            height: 32pt;
+            border-radius: 5pt;
+
+            border: none;
+        }
 
     }
 }

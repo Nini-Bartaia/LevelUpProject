@@ -8,6 +8,8 @@ body, html {
     justify-content: center;
     align-items: center;
     background: #2C3234;
+
+    
   
     
   }
@@ -83,4 +85,35 @@ body, html {
             justify-content: center;
             align-items: center;
 }
+
+@mixin border{
+  width: 251pt;
+        height: 5pt;
+        border: 1px solid #F05A22;
+        border-radius: 0pt 0pt 4pt 4pt;
+        box-shadow: 0pt 0pt 10pt #F05A22;
+        position: absolute;
+        position: absolute;
+        left: 37%;
+        background: #F05A22;
+}
+
+@mixin item{
+                width: 78pt;
+                height: 40pt;
+                position: absolute;
+                right: 1.5%;
+}
+
+@mixin span{
+  @include titles;
+            font-size: 14pt;
+            line-height: 18px;
+            font-weight: 100;
+            opacity: 100%;
+}
+
+
+$minmobile:375px;
+$minheightmobile:812px;
 

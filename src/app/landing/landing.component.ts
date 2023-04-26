@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { windowWhen } from 'rxjs';
 
 @Component({
   selector: 'app-landing',
@@ -8,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
   secondTab=false
   firstTab=false
+  thirdTab=false
+  show=false;
   constructor() { }
 
   ngOnInit(): void {
     this.firstTab=true
+
+    
 
 
   }
@@ -20,13 +25,25 @@ export class LandingComponent implements OnInit {
 
     this.secondTab=true
     this.firstTab=false;
-    // console.log(this.secondTab)
+    this.thirdTab=false;
+     
 
   }
 
   first(){
     this.firstTab=true
     this.secondTab=false;
+    this.thirdTab=false;
   }
+
+  third(){
+    this.thirdTab=true
+    this.firstTab=false;
+    this.secondTab=false
+    console.log(this.thirdTab)
+
+  }
+
+ 
 
 }

@@ -1,8 +1,15 @@
 <div class="container">
+    <div class="mobileheader">
+        <img src="assets/logo.png" alt="" class="mobileLogo">
+       <button class="firstBtn">Sign up</button>
+       <button class="secondBtn">Sign in</button>
+    </div>
     <div class="dates">
         <div id="slots">სლოტები</div>
         <div class="date">10 იანვარი - 12 მარტი</div>
     </div>
+
+
 
     <div style="background-color: #25292B; width: 34pt; height: 34pt; border-radius: 50%; display: flex; justify-content: center; align-items: center;" class="x-mark">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 30px; height: 30px;">
@@ -13,32 +20,38 @@
 
     <img src="assets/banner.jpg" alt="" class="mainbg">
     <p>მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი</p>
+    <p class="mobPar">მოიპოვე 10 საგზურიდან ერთ-ერთი</p>
     <span>მოხვდი პოკერის ფესტივალზე მალტაში</span>
     
 
     <div class="header">
         <div (click)="first()">
             <span> 1 - 29 აპრილი</span>
+            <span class="octomber">28 ოქტ. - 7 ნოემ.</span>
            
             <br>
-            <span class="second"> Cash Games</span>
+            <span class="secondCash"> Cash Games</span>
           
         </div>
         <div (click)="onClick()">
             <span> 13 - 29 აპრილი</span>
+            <span class="span2">10 - 29 დეკ.</span>
             <br>
             <span class="second">Spring Series</span>
+            <span class="span3">New Year Series</span>
         </div>
-        <div>
-            <span>30 აპრილი</span>
+        <div (click)="third()">
+            <span >30 აპრილი</span>
+            <span class="span4">28 ოქტ. - 7 ნოემ.</span>
             <br>
-            <span class="second">Final Stage</span>
+            <span class="second finalSecond">Final Stage</span>
         </div>
 
     </div>
 
     <ng-container *ngIf="secondTab">
         <div class="secondHeader">
+            <div class="secondTopBorder"  *ngIf="!thirdTab"></div>
             <div class="childHeader">
                 ᲢᲣᲠᲜᲘᲠᲔᲑᲘ ᲓᲐ ᲡᲐᲢᲔᲚᲘᲢᲔᲑᲘ
             </div>
@@ -62,21 +75,135 @@
         </div>
     </ng-container>
 
-    <div class="wrapper"  [ngStyle]="secondTab ? {'height':'956pt'}:{'height':'1758pt'}">
+    <div class="wrapper"  [ngClass]="{'secondWrapper': secondTab, 'thirdWrapper': thirdTab}"   >
+   
+        <div class="topBorder" *ngIf="firstTab"></div>
 
-        <div class="topBorder"></div>
+        <div class="top" *ngIf="firstTab" >
 
-        <div class="top">
-
-            <p *ngIf="!secondTab">1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ</p>
+            <p *ngIf="!secondTab && firstTab">1 ₾ ᲠᲔᲘᲙᲘ = 1 ᲥᲣᲚᲐᲡ</p>
             <p *ngIf="secondTab">ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ</p>
         </div>
 
-        <div class="back" [ngStyle]="secondTab ? {'height':'92%'}: {'height':'95.7%'}">
-            <p class="titleTop">ჰოლდემის TOP20 ლიდერბორდი</p>
-            <img src="assets/example-icon.png" alt="" class="info">
+        <div class="back"  [ngClass]="{'secondBack': secondTab, 'thirdBack': thirdTab}">
+            
+            <p class="titleTop" *ngIf="firstTab" >ჰოლდემის TOP20 ლიდერბორდი</p>
+            <img src="assets/example-icon.png" alt="" class="info" *ngIf="firstTab" >
 
-            <div class="first">
+            <img src="assets/final-info-img.jpg" alt="" *ngIf="thirdTab" class="tourImage">
+
+            <p *ngIf="thirdTab" class="maltaPara">ᲒᲐᲔᲛᲒᲖᲐᲕᲠᲔ THE FESTIVAL IN MALTA-ᲖᲔ!</p>
+            <p *ngIf="thirdTab" class="festivalPara">The Festival სერიების ფარგლებში, ევროპაბეთი უკვე მეორედ აძლევს პოკერის მოთამაშეებს <br> <span>დაუვიწყარი მოგზაურობის შანსს.</span></p>
+
+            <div *ngIf="thirdTab" class="middleNote">15-დან 21 მაისის ჩათვლით მალტა პოკერის ფესტივალს უმასპინძლებს</div>
+            <div class="orangeLine1" *ngIf="thirdTab"></div>
+            <div *ngIf="thirdTab" class="contents">
+                <div class="contentWrapper">
+                    <div class="orangeLine2"></div>
+
+                    <div class="orangeLine3" *ngIf="thirdTab"></div>
+                    <div class="orangeLine4" *ngIf="thirdTab"></div>
+
+                    <div class="headerWrapper">
+                    A კატეგორიის საგზურში შედის
+                </div>
+
+                   
+                    <div>
+                        <img src="assets/final-item-ticket-icon.png" alt="" class="icon1">
+                        <p class="para1" style="margin-right:10pt;">ორმხრივი ავიაბილეთი</p>
+                        
+                    </div>
+                    <div>
+
+                        <img src="assets/final-item-event-icon.png" alt="" class="icon1">
+                        <p class="para1">The Festival in Malta <br> -ს მეინ ივენთის ბაი-ინი</p>
+
+                    </div>
+                    <div>
+                        <img src="assets/final-item-event-icon.png" alt="" class="icon1">
+                        <p class="para1">Holdem ან Omaha <br> ჰაიროლერ ტურნირის <br> ბაი-ინი</p>
+                    </div>
+                    <div>
+                        <img src="assets/final-item-hotel-icon.png" alt="" class="icon1">
+                        <p class="para1">სასტუმრო Golden Tulip <br> Vivaldi Hote</p>
+                    </div>
+                    <div>
+                        <img src="assets/final-item-money-icon.png" alt="" class="icon1">
+                        <p class="para1">€500 სახარჯი ფული</p>
+                    </div>
+               
+                </div>
+                <div class="contentWrapper">
+                    <div class="orangeLine2"></div>
+
+                    <div class="headerWrapper">
+                    A კატეგორიის საგზურში შედის
+                </div>
+
+                
+                <div>
+                    <img src="assets/final-item-ticket-icon.png" alt="" class="icon1">
+                    <p class="para1" style="margin-right:10pt;">ორმხრივი ავიაბილეთი</p>
+                    
+                </div>
+                <div>
+
+                    <img src="assets/final-item-event-icon.png" alt="" class="icon1">
+                    <p class="para1">The Festival in Malta <br> -ს მეინ ივენთის ბაი-ინი</p>
+
+                </div>
+                <div>
+                    <img src="assets/final-item-event-icon.png" alt="" class="icon1">
+                    <p class="para1">Holdem ან Omaha <br> ჰაიროლერ ტურნირის <br> ბაი-ინი</p>
+                </div>
+                <div>
+                    <img src="assets/final-item-hotel-icon.png" alt="" class="icon1">
+                    <p class="para1">სასტუმრო Golden Tulip <br> Vivaldi Hote</p>
+                </div>
+                <div>
+                    <img src="assets/final-item-money-icon.png" alt="" class="icon1">
+                    <p class="para1">€500 სახარჯი ფული</p>
+                </div>
+                </div>
+                <div class="contentWrapper" >
+                    <div class="orangeLine2"></div>
+                    <div class="headerWrapper" style="margin-top:-21pt;">
+                    A კატეგორიის საგზურში შედის
+                </div>
+                
+             
+
+                <div  style="margin-top:-16pt;">
+                    <img src="assets/final-item-ticket-icon.png" alt="" class="icon1">
+                    <p class="para1" style="margin-right:10pt;">ორმხრივი ავიაბილეთი</p>
+                    
+                </div>
+                <div  style="margin-top:-16pt;">
+
+                    <img src="assets/final-item-event-icon.png" alt="" class="icon1">
+                    <p class="para1">The Festival in Malta <br> -ს მეინ ივენთის ბაი-ინი</p>
+
+                </div>
+                <div  style="margin-top:-16pt;">
+                    <img src="assets/final-item-hotel-icon.png" alt="" class="icon1">
+                    <p class="para1" style="margin-right:90pt;">სასტუმრო</p>
+                </div>
+                <div  style="margin-top:-16pt;">
+                    <img src="assets/final-item-money-icon.png" alt="" class="icon1">
+                    <p class="para1">€500 სახარჯი ფული</p>
+                </div>
+               
+                </div>
+            </div>
+
+
+           
+
+            <div class="first" *ngIf="!thirdTab" [ngClass]="{'first2':secondTab}">
+                <p id="top20" *ngIf="secondTab">ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ</p>
+                <div *ngIf="secondTab" id="top2">ქულების დაგროვების მექანიკა</div>
+                <img *ngIf="secondTab" src="assets/mechanic-icon.png" alt="" id="mechanicIcon">
                 <div class="title left">ადგილი</div>
                 <img src="assets/watch-icon-sm.png" alt="" class="watchIcon">
                 <div class="title">ვაუჩერი</div>
@@ -218,10 +345,10 @@
             </div>
 
 
-            <p class="parTop"  *ngIf="!secondTab" >TOP20 ლიდერბორდი ჰოლდემში</p>
-            <img  *ngIf="!secondTab" src="assets/example-icon.png" alt="" class="exampleIcon">
+            <p class="parTop"  *ngIf="firstTab" >TOP20 ლიდერბორდი ჰოლდემში</p>
+            <img  *ngIf="firstTab" src="assets/example-icon.png" alt="" class="exampleIcon">
 
-            <div class="first"   *ngIf="!secondTab">
+            <div class="first"   *ngIf="firstTab" >
                  <div class="title left">ადგილი</div>
                 <img src="assets/watch-icon-sm.png" alt="" class="watchIcon">
                 <div class="title">ვაუჩერი</div>
@@ -339,31 +466,33 @@
                 </div> 
             </div>
 
-            <div class="second">
+            <div class="second" *ngIf="!thirdTab"  >
 
                 <div>
-                    <img src="assets/travel-icon-sm.png" id="secondTravel" [ngStyle]="secondTab ? {'top':'62%'}:{ 'top':'82%'}">
+                    <img src="assets/travel-icon-sm.png" class="secondTravel" [ngStyle]="secondTab ? {'top':'65.5%'}:{ 'top':'82%'}" [ngClass]="{'secTravel': secondTab}">
                     <p class="par1">The Festival in Malta-ს საგზური</p>
                 </div>
                 <div>
-                    <img src="assets/ticket-icon-sm.png" alt="" id="secondTicket" [ngStyle]="secondTab ? {'top':'72%'}:{ 'top':'87.5%'}"  >
+                    <img src="assets/ticket-icon-sm.png" alt="" class="secondTicket" [ngStyle]="secondTab ? {'top':'75%'}:{ 'top':'87.5%'}"  [ngClass]="{'secTicket': secondTab}" >
                     <p class="par2">სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება <br>The Festival in Malta-ს საგზური</p>
                 </div>
                 <div>
-                    <img src="assets/watch-icon-sm.png" alt="" id="secondWatch" [ngStyle]="secondTab ? {'top':'81%'}:{ 'top':'92.5%'}"  >
+                    <img src="assets/watch-icon-sm.png" alt="" class="secondWatch" [ngStyle]="secondTab ? {'top':'83.5%'}:{ 'top':'92.5%'}" [ngClass]="{'secWatch': secondTab}" >
                     <p class="par3">ტექნიკის მაღაზიის ვაუჩერი</p>
                 </div>
 
-                <div id="secondLine" [ngStyle]="secondTab ? {'top':'62%'}:{ 'top':'82%'}"  ></div>
-                <div id="thirdLine"  [ngStyle]="secondTab ? {'top':'71%'}:{ 'top':'87%'}"></div>
-                <div id="forthLine" [ngStyle]="secondTab ? {'top':'81%'}:{ 'top':'92.5%'}" ></div>
+                <div id="secondLine" [ngStyle]="secondTab ? {'top':'65%'}:{ 'top':'82%'}"  ></div>
+                <div  [ngClass]="{'seccLine': secondTab}"></div>
+                <div id="thirdLine"  [ngStyle]="secondTab ? {'top':'74%'}:{ 'top':'87%'}"></div>
+                <div id="forthLine" [ngStyle]="secondTab ? {'top':'83%'}:{ 'top':'92.5%'}" ></div>
 
             </div>
 
 
-            <img src="assets/star.png" alt="" class="star"  [ngStyle]="secondTab ? {'top':'94.5%'}:{ 'top':'97.8%'}" >
-            <p  class="lastPara">ლიდერბორდის შედეგები განახლდება<span class="small">პოკერის ლობიში</span></p>
-            <p *ngIf="secondTab" class="lastPara" style="top:95%; left:7%;" >* სატურნირო ლიდერბორდის ქულების დათვლაში არ მონაწილეობს ფრიროლები და სატელიტები</p>
+            <img src="assets/star.png" alt="" class="star"  [ngStyle]="secondTab ? {'top':'94.5%'}:{ 'top':'97.8%'}" *ngIf="secondTab">
+            <p  class="lastPara" *ngIf="!thirdTab" >ლიდერბორდის შედეგები განახლდება<span class="small">პოკერის ლობიში</span></p>
+            <p *ngIf="secondTab"   [ngClass]="{'damateba': secondTab}"  >* სატურნირო ლიდერბორდის ქულების დათვლაში არ მონაწილეობს ფრიროლები და სატელიტები</p>
+          
 
         </div>
     </div>
@@ -375,6 +504,7 @@
             <div id="pare1">
             <p class="name1">Holdem Highrollers</p>
             <p class="name2">ბაი-ინი - 550₾</p>
+            
             </div>
             <div id="pare2">
                 <p class="name3">50 000 ₾</p>
@@ -389,11 +519,12 @@
             <div id="pare3">
                 <p class="name1">Omaha Highrollers</p>
                 <p class="name2">ბაი-ინი - 550₾</p>
+               
                 
             </div>
             <div id="pare4">
-                <p class="name3">50 000 ₾</p>
-                <p class="name4">28 აპრილი</p>
+                <p class="name3 name33" id="name33">50 000 ₾</p>
+                <p class="name4  name44" id="name44">28 აპრილი</p>
                 
             </div>
         </div>
@@ -405,7 +536,7 @@
                 
             </div>
             <div id="pare6">
-                <p class="name3">150 000 ₾</p>
+                <p class="name3 " id="number">150 000 ₾</p>
                 <p class="name6">29 აპრილი</p>
                 
             </div>
@@ -414,7 +545,7 @@
         <p id="footerTitle">* სამივე ტურნირის გამარჯვებულები მიიღებენ ბეჭდებს და ფინალურ ეტაპზე, The <br> Lord of the Rings ტურნირზე, იბრძოლებენ The Festival in Malta-ს საგზურის მისაღებად.</p>
     </div>
 
-    <div class="add">
+    <div class="add" *ngIf="!thirdTab">
         <div class="headerLine"></div>
 
         <p id="addPara">ᲓᲐᲛᲐᲢᲔᲑᲘᲗ ᲨᲔᲓᲒᲔᲑᲐ, ᲥᲔᲨᲒᲔᲘᲛᲘᲡ, ᲢᲣᲠᲜᲘᲠᲔᲑᲘᲡ ᲓᲐ ᲡᲞᲘᲜ ᲞᲝᲙᲔᲠᲘᲡ<br><span id="spanTitle">12 SIDE ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲘ</span></p>
@@ -424,6 +555,150 @@
             
 
     </div>
+
+    <div class="cardsContainer" *ngIf="thirdTab">
+        <div class="cardsHeader">ᲛᲝᲘᲒᲔ ᲡᲐᲒᲖᲣᲠᲘ 30 ᲐᲞᲠᲘᲚᲘᲡ ᲤᲘᲜᲐᲚᲣᲠ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ</div>
+
+        <div class="leftBox">
+            <div class="box">
+                <p class="firstname">“Cashgame Highrollers” -</p>
+                <span class="travel1">1 საგზური</span>
+                <img src="assets/poker-item-1-ticket-icon.png" alt="" class="pokerItem">
+            </div>
+            <div class="box">
+                <p class="firstname">„Cashgame Grinders”</p>
+                <span class="travel1">1 საგზური</span>
+                <img src="assets/poker-item-1-ticket-icon.png" alt="" class="pokerItem2">
+            </div>
+            <div class="box">
+                <p class="firstname">„Tournament Sharks“ -</p>
+                <span class="travel1">1 საგზური</span>
+                <img src="assets/poker-item-1-ticket-icon.png" alt="" class="pokerItem3">
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="box">
+                <p class="firstname2">„The Festival in Malta, GTD“</p>
+                <p class="firstname3">A კატეგორიის 1 საგზური <br>
+                    B კატეგორიის 1 საგზური <br>
+                    ტურნირში მონაწილეობის მიღება შეუძლია <br> ნებისმიერ მსურველს 165₾ ბაი-ინის გადახდით.
+                </p>
+                <img src="assets/poker-item-2-ticket-icon.png" alt="" class="pokerItem4">
+            </div>
+            <div class="box">
+                <p class="firstname2">„The Lord of the Rings“</p>
+                <p class="firstname3">C კატეგორიის 1 საგზური <br>
+                    <br>
+                    ტურნირში მონაწილეობის მიღება შეუძლია <br> ნებისმიერ მსურველს 165₾ ბაი-ინის გადახდით.
+                </p>
+                <img src="assets/poker-item-2-ticket-icon.png" alt="" class="pokerItem5">
+            </div>
+          </div>
+
+          <p class="lastPara2">* თუ მოთამაშე მოიგებს ბეჭედს ორჯერ ან მეტჯერ, ის The Lord of the Rings ტურნირზემოხვდება <br> <span>ბეჭდების შესაბამისი რაოდენობის სტეკით</span> </p>
+          <p class="lastPara3"> *ტურნირში მონაწილეობის მიღება შეუძლია ნებისმიერ მსურველს 165₾-იანი <br> <span>ბაი-ინის გადახდით.</span></p>
+
+
+    </div>
+    
+
+    <div class="lastList" *ngIf="thirdTab">
+        <div class="lastListHeader">მისტიური გასაღები
+
+            <div class="newLine"></div>
+            <img src="assets/key.png" alt="" class="keyImg">
+            
+        </div>
+        <p class="lastParaPrize">მოთამაშეები გარკვეული საპრიზო ადგილების დაკავების შემთხვევაში მიიღებენ საიდუმლო გასაღებს</p>
+
+        <div class="scrollable">
+
+            <div class="innerScrollable">
+            <div>
+                <div class="circle2">1</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">2</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">3</div>
+                <p class="tourPar">სპეციალური ტურნირი Tournament Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">4</div>
+                <p class="tourPar">სპეც. ტურნირი Tournament Sharks III ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">5</div>
+                <p class="tourPar">Holdem Grinders ლიდერბორდის გამარჯვებული</p>
+            </div>
+            <div>
+                <div class="circle2">6</div>
+                <p class="tourPar">ქეშგეიმ დაბალი ლიმიტების ლიდერბორდების გამარჯვებულები</p>
+            </div>
+            <div>
+                <div class="circle2">7</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">8</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">9</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">10</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">11</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">12</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">13</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">14</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">15</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">16</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">17</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">18</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">19</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+            <div>
+                <div class="circle2">20</div>
+                <p class="tourPar">სპეციალური ტურნირი Cashgame Sharks II ადგილი</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
 
     <p class="headerTitle">წესები და პირობები</p>
     <div class="questionsDiv">
